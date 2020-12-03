@@ -92,7 +92,7 @@ var ich = {
 // console.log(ich.kopf.augen);
 
 const USER_NAME = 'Ulvi';
-console.log(USER_NAME);
+// console.log(USER_NAME);
 
 
 let example1 = 'hui!';
