@@ -1,0 +1,255 @@
+:root {
+    --colorPrimary: #E74149;
+    --fontPrimary: 'Segoe', Arial, Tahoma, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: 'Segoe';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/segoeui.ttf');
+}
+
+@font-face {
+    font-family: 'Segoe';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/segoeuib.ttf');
+}
+
+@font-face {
+    font-family: 'Segoe';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/seguisb.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontPrimary);
+    line-height: 1.3em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    margin: 30px;
+}
+
+.container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#nav {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+#headerImage::before {
+    content: '';
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#headerImage {
+    position: relative;
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 30px + 30px);
+    height: 585px;
+    background-image: url("../img/content/blog-banner.png");
+    background-position: 62% center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.innerWrapper {
+    padding: 0 30px;
+}
+
+h1 {
+    margin-top: 160px;
+    margin-bottom: 75px;
+    font-size: 36px;
+    color: #FFF;
+    line-height: 1.5em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    background-color: var(--colorPrimary);
+    border: none;
+    color: #FFF;
+    border-radius: 12px;
+    padding: 20px 35px;
+    font-size: 18px;
+    font-family: var(--fontPrimary);
+    font-weight: 600;
+}
+
+main {
+    line-height: 1.5em;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.37em;
+}
+
+/* ARTICLE BEGIN */
+
+article.post {
+    margin: 40px 0;
+    max-width: 304px;
+}
+
+article.post h3 {
+    font-size: 18px;
+    color: var(--colorPrimary);
+}
+
+article.post a {
+    color: var(--colorPrimary);
+    padding-right: 20px;
+    background-image: url(../img/list-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.5em;
+}
+
+/* ARTICLE END */
+
+/* FOOTER BEGIN */
+
+footer {
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -30px;
+    background-color: #DDDDDD;
+    width: calc(100% + 30px + 30px);
+    height: calc(100% + 30px);
+}
+
+#footerNav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#footerLogo {
+    display: none;
+}
+
+#footerNav>ul>li {
+    flex-basis: 50%;
+    padding-left: 40px;
+    background-image: url(../img/list-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 0.5em;
+    margin: 10px 0 10px;
+}
+
+#footerNav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#end {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 12px;
+    color: #969696;
+}
+
+@media (min-width: 480px) {
+    h1 {
+        max-width: 500px;
+        font-size: 45px;
+    }
+    .articleContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    article.post {
+        flex-basis: calc(50% - 40px);
+        min-width: 304px;
+    }
+}
+
+@media (min-width: 950px) {
+    #topHeader {
+        height: 100px;
+    }
+    #headerImage .innerWrapper {
+        margin-left: 10%;
+    }
+    .abstract {
+        max-width: 60%;
+    }
+    footer .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'nav logo' 'nav footerEnd';
+        grid-column-gap: 150px;
+    }
+    #footerNav {
+        grid-area: nav;
+        /* grid-column: 1;
+        grid-row: span 2; */
+        justify-self: start;
+        align-self: end;
+    }
+    #footerNav ul {
+        margin-bottom: 0;
+    }
+    #footerLogo {
+        grid-area: logo;
+        display: block;
+        /* grid-column: 2;
+        grid-row: 1; */
+        margin-top: 25px;
+        justify-self: end;
+    }
+    #end {
+        grid-area: footerEnd;
+        /* grid-column: 2;
+        grid-row: 2; */
+        justify-self: end;
+        align-self: end;
+        margin: 0;
+    }
+}

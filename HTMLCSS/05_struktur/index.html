@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <title>Strukturierung einer HTML Seite</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="websiteHeader">
+            <a href="index.html">
+                <img src="http://placehold.it/150x150?text=LOGO" alt="Logo Firmenname">
+            </a>
+        </header>
+
+        <main>
+            <!-- CONTENT ELEMENT BEGIN -->
+            <section class="blockTeaser">
+                <header>
+                    <h2>Ende von Corona in Sicht Mitte Dezember 2020</h2>
+                </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ratione officia error quasi.
+                    Voluptas error at voluptates eos aut voluptatum illo accusantium. Neque rerum autem dicta quisquam
+                    libero aperiam sequi! Iure corrupti pariatur expedita fuga beatae quis, eaque tempore natus
+                    quibusdam vel id laboriosam ipsam in, ducimus doloremque nam maiores officia fugiat itaque enim!
+                    Ipsum corporis ex provident nisi qui non sequi voluptatibus ab, dolor quae totam quibusdam tempora
+                    doloribus incidunt reprehenderit itaque optio, nesciunt sit beatae ea officia. Id molestias nulla
+                    possimus! Voluptatem blanditiis dicta quisquam consequatur magni id. Quod, similique? Distinctio
+                    porro perspiciatis voluptatibus modi asperiores quasi maiores!</p>
+                <footer>
+                    <div class="author">Ulvi Ulu</div>
+                </footer>
+            </section>
+            <!-- CONTENT ELEMENT END -->
+
+        </main>
+
+        <!-- weiterführender Content BEGIN -->
+        <aside class="additionalContent">
+            <div id="weather-widget">
+                <strong> Das aktuelle Wetter: </strong><br>
+                <img src="img/weather.svg" width="75" alt=""> 22°C
+                <!-- https://de.wikipedia.org/wiki/Creative_Commons -->
+            </div>
+        </aside>
+        <!-- aside: nebensächlicher Content -->
+        <!-- weiterführender Content END -->
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>Kontakt</li>
+                    <li>Impressum</li>
+                    <li>AGB</li>
+                    <li>FAQ</li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <small>&copy; 2020 by BestDeveloperEver.org</small>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

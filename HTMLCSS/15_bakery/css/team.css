@@ -1,0 +1,30 @@
+.team .member {
+    margin-bottom: 3rem;
+}
+
+.team .member blockquote small {
+    display: block;
+    margin-top: 1em;
+    color: var(--grey);
+}
+
+@media (min-width: 768px) {
+    .team .member {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    .team .member:nth-child(2n) {
+        flex-flow: row-reverse;
+    }
+    .team .member:nth-child(2n) blockquote {
+        text-align: right;
+    }
+    .team .member img {
+        flex-basis: 40%;
+        object-fit: contain;
+    }
+    .team .member blockquote {
+        flex-basis: 60%;
+    }
+}

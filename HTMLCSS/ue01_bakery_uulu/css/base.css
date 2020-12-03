@@ -1,0 +1,101 @@
+/* VARIABLES */
+
+:root {
+    --brown: #D0B085;
+    --grey: #707070;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'), url('../fonts/josefin-sans-v12-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''), url('../fonts/josefin-sans-v12-latin-300.woff2') format('woff2'), url('../fonts/josefin-sans-v12-latin-300.woff') format('woff');
+}
+
+/* GENERAL */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    font-size: 110%;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--grey);
+}
+
+/* WRAPPING */
+
+.innerWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* HEADERS */
+
+h2 {
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 50px;
+    color: var(--grey);
+    text-align: center;
+}
+
+/* IMAGES */
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* Damit bilder sich responsive verhalten  */
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+/* BUTTONS */
+
+.btn {
+    font-weight: 300;
+    padding: 20px 25px;
+    border: 2px solid;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btnSoft {
+    color: var(--brown);
+    border-color: var(--brown);
+}
+
+.btnHard {
+    color: white;
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+
+/* 
+INFO:
+"@import 'header.css';": to import other css files (load order) - has to be placed on the first line. 
+*/
