@@ -7,3 +7,4 @@ List
 - Apfel
 - Banane
 - Birne
+- Erdbeere
