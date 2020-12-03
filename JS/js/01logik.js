@@ -98,9 +98,9 @@ console.log(USER_NAME);
 let example1 = 'hui!';
 
 {
-    console.log(example1);
+    // console.log(example1);
     example1 = '*Neuer Wert*';
 }
 
-console.log(example1);
+// console.log(example1);
 
