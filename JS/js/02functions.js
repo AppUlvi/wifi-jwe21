@@ -18,7 +18,8 @@ function sayMyName(name) {
         console.log(name + ' is not a Name.');
 }
 
-// sayMyName('Ulvi');
-// sayMyName('Thomas');
-// sayMyName('Bernhard');
-// sayMyName(userNameFromDatabase);
+sayMyName('Ulvi');
+sayMyName('T');
+sayMyName('123');
+sayMyName('Ber22');
+sayMyName(userNameFromDatabase);
