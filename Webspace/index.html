@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lines und Canvas</title>
+    <style>
+        canvas {
+            margin: 10px;
+            box-shadow: 5px 5px 15px #888888;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Canvas Lines</h1>
+    <canvas id="c1"></canvas>
+    <canvas id="c2"></canvas>
+    <canvas id="c3"></canvas>
+    <canvas id="c4"></canvas>
+    <canvas id="ce"></canvas>
+
+
+    <script src="responsive-canvas.js"></script>
+    <script>
+
+        // Canvas 1
+
+        let width = 250;
+        let height = 250;
+        let c1 = init_canvas('c1', width, height);
+
+        for (let i = 0; i < 11; i++) {
+            c1.beginPath();
+            c1.moveTo(250, (height / 10) * i);
+            c1.lineTo(0, (height / 10) * i);
+            c1.strokeStyle = "rgb(0,200,0)";
+            c1.stroke();
+            c1.closePath();
+        }
+
+        // Canvas 2
+
+        let c2 = init_canvas('c2', width, height);
+
+        for (let i = 0; i < 11; i++) {
+            c2.beginPath();
+            c2.moveTo(250, (height / 10) * i);
+            c2.lineTo(0, (height / 10) * i);
+            c2.moveTo((width / 10) * i, 250);
+            c2.lineTo((width / 10) * i, 0);
+            c2.strokeStyle = "rgb(0,200,0)";
+            c2.stroke();
+            c2.closePath();
+        }
+
+        // Canvas 3
+
+        let c3 = init_canvas('c3', width, height);
+
+        for (let i = 0; i < 11; i++) {
+            c3.moveTo(125, 125)
+            c3.lineTo((width / 10) * i, height);
+            c3.strokeStyle = "rgb(0,200,0)";
+            c3.stroke();
+            c3.closePath();
+        }
+
+        // Canvas 4
+
+        let c4 = init_canvas('c4', width, height);
+
+        for (let i = 0; i < 11; i++) {
+            c4.moveTo((width / 10) * i, 0)
+            c4.lineTo(0, (height / 10) * i);
+            c4.strokeStyle = "rgb(0,200,0)";
+            c4.stroke();
+            c4.closePath();
+        }
+
+        // Canvas EXTRA
+
+        let ce = init_canvas('ce', width, height);
+
+        for (let i = 0; i < 11; i++) {
+            ce.beginPath();
+            ce.moveTo(0, (250 / 10) * i);
+            ce.lineTo((250 / 10) * i, 250);
+            ce.moveTo(250, (250 / 10) * i);
+            ce.lineTo((250 / 10) * i, 0);
+            ce.strokeStyle = "rgb(0,200,0)";
+            ce.stroke();
+            ce.closePath();
+        }
+
+    </script>
+</body>
+
+
+</html>
