@@ -23,3 +23,32 @@ $('#calc').click(
     }
 );
 
+$('#events').on({
+
+    'mouseenter': function () {
+        $(this).css({
+            'background-color': 'yellow',
+            'color': 'green'
+        });
+    },
+
+    'mouseleave': function () {
+        $(this).css({
+            'background-color': 'green',
+            'color': 'yellow'
+        });
+    }
+
+});
+
+$('#events2').on({
+
+    'mouseenter': function () {
+        $(this).addClass('mouseover');
+    },
+
+    'mouseleave': function () {
+        $(this).removeClass('mouseover');
+    }
+
+});
