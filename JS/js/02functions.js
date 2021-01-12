@@ -5,7 +5,7 @@ function checkMyInput(input) {
         for (i = 0; i < input.length; i++) {
             if (!(isNaN(parseInt(input.charAt(i)))))
                 return false;
-        } //checks if there is a number in string
+        } //returns false if there is a number in string
         return true;
     } else
         return false;
