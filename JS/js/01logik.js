@@ -41,9 +41,10 @@ spruch = "-=[" + spruch + "]=-";
 
 
 var inputFeld1 = '<input type="text" value="test">';
-var inputFeld2 = "<input type\"text\" value=\"test\">"
+var inputFeld2 = "<input type=\"text\" value=\"test\">";
+var inputFeld3 = `<input type="text" value="${spruch}">`;
 
-// console.log(inputFeld1, inputFeld2);
+// console.log(inputFeld1, inputFeld2, inputFeld3);
 
 
 // window.alert(inputFeld1);
@@ -70,6 +71,9 @@ var katalog = [
 ];
 
 // console.log(katalog[1][0]);
+
+katalog.pop(); // letzte stelle wird gelöscht
+katalog.push('Kapitel 3'); // an die letzte Stelle wird hinzugefügt
 
 var neuesArray = [];
 // console.log(neuesArray[0]);
