@@ -19,6 +19,7 @@ let namen = [
 //     }
 // );
 
+// Neue Schreibweise in ES6
 namen.forEach(elm => {
     console.log(elm);
     let html = '<img src="https://placehold.it/300x200?text=' + elm + '">';
