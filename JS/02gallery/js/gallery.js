@@ -13,17 +13,21 @@ let images = [
     "pexels9"
 ];
 
+let gallery = $('#gallery');
+console.log(gallery);
+
 // output thumbs
 
 $(images).each(function (i, elm) {
     // console.log(images[i]);
 
-    // img tag
+    let imgTag = `<img src="img/thumbs/${elm}.jpg" alt="" class="thumb">`
+    // console.log(imgTag);
 
-    let imgTag = `<img src="img/thumgbs/${elm}.jpg" alt="">`
+    // gallery.html(imgTag);
 
+    gallery.append(imgTag)
 
-    console.log(imgTag);
 
 });
 

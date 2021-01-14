@@ -19,3 +19,13 @@ img {
 .wrapper {
     text-align: center;
 }
+
+.thumb {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
