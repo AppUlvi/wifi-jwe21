@@ -29,3 +29,34 @@ img {
     margin: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
 }
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox .lightboxInner {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.lightboxInner img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 50px;
+}
+
+.hide {
+    display: none;
+}
