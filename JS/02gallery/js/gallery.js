@@ -16,13 +16,15 @@ let images = [
 let gallery = $('#gallery');
 // console.log(gallery);
 
-let lightboxContainer = $(`<div id="lightbox" class="hide"> <span class="close">X</span> <div class="lightboxInner"></div> </div>`);
-lightboxContainer.find('.lightboxInner').html('<img src="img/original/pexels0.jpg" alt="">');
-$('body > .wrapper').append(lightboxContainer);
+let divClassLightbox = $(`<div id="lightbox" class="hide"> <img class="close" src="img/close.png" alt="close-button"> <div class="lightboxInner"></div> </div>`);
+
+$('body > .wrapper').append(divClassLightbox);
+
+
 
 
 // output thumbs
-$(images).each(function (i, elm) {
+$(images).each(function (i) {
     // console.log(images[i]);
 
     let imgTag = `<img src="img/thumbs/${images[i][0]}.jpg" alt="${images[i][1]}" class="thumb">`
@@ -36,20 +38,54 @@ $(images).each(function (i, elm) {
 
 });
 
+
+
+
+
 // click event to show original size img
 
 $('#gallery a').click(function (e) {
     e.preventDefault();
     let originalImg = $(this).attr('href');
-    lightboxContainer.find('.lightboxInner').html(`<img src="${originalImg}" alt="">`);
-    lightboxContainer.removeClass('hide');
-    console.log(originalImg);
+    divClassLightbox.find('.lightboxInner').html(`<img src="${originalImg}" alt="">`);
+    divClassLightbox.removeClass('hide');
 });
 
-$('span').click(function () {
-    lightboxContainer.addClass('hide');
+$('.close').click(function () {
+    divClassLightbox.addClass('hide');
+    console.log('click on close')
 });
 
+$('.lightboxInner').click(function (e) {
 
-//ecomerce
-//fag gesetzt
+    // What is 'e'?
+    // https://www.youtube.com/watch?v=OiWLIe_Cz6E&feature=emb_logo
+
+    let lightboxImg = $('.lightboxInner img');
+
+    // console.log(lightboxImg);
+    // lightboxImg: <img src="img/original/pexels2.jpg" alt="">
+
+    // console.log(e);
+    // console.log(e.target);
+    // e.target: <img src="img/original/pexels2.jpg" alt="">
+
+    // if (lightboxImg.is(e.target)) {
+    //     console.log('click on img');
+    // } else {
+    //     divClassLightbox.addClass('hide');
+    //     console.log('click outside img');
+    // }
+
+    if (!lightboxImg.is(e.target)) {
+        divClassLightbox.addClass('hide');
+        console.log('click outside img');
+    }
+
+    // .is(selector)Returns: Boolean
+    // Description: Check the current matched set of elements against a selector, element, or jQuery object 
+    //              and return true if at least one of these elements matches the given arguments.
+
+
+});
+
