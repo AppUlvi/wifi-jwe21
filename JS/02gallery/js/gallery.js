@@ -1,16 +1,16 @@
-// list with img names
+// list with img names and alt
 
 let images = [
-    "pexels0",
-    "pexels1",
-    "pexels2",
-    "pexels3",
-    "pexels4",
-    "pexels5",
-    "pexels6",
-    "pexels7",
-    "pexels8",
-    "pexels9"
+    ["pexels0", "turkish coffee"],
+    ["pexels1", "coffee on bed"],
+    ["pexels2", "filter coffee"],
+    ["pexels3", "coffee foam art"],
+    ["pexels4", "ice coffee"],
+    ["pexels5", "normal coffee aerial view"],
+    ["pexels6", "coffee with slogan: \"Life begins after coffee\""],
+    ["pexels7", "coffee in a jug"],
+    ["pexels8", "ice coffee with a camera behind it"],
+    ["pexels9", "people sitting in a circle drinking coffee (aerial view)"]
 ];
 
 let gallery = $('#gallery');
@@ -25,27 +25,16 @@ $('body > .wrapper').append(lightboxContainer);
 $(images).each(function (i, elm) {
     // console.log(images[i]);
 
-    let imgTag = `<img src="img/thumbs/${elm}.jpg" alt="" class="thumb">`
-    // console.log(imgTag);
+    let imgTag = `<img src="img/thumbs/${images[i][0]}.jpg" alt="${images[i][1]}" class="thumb">`
+    console.log(imgTag);
 
 
-
-    let output = `<a href="img/original/${elm}.jpg">${imgTag}</a>`;
+    let output = `<a href="img/original/${images[i][0]}.jpg">${imgTag}</a>`;
 
     // gallery.html(output);
     gallery.append(output);
 
 });
-
-
-//    < div id = "lightbox" >
-//         <span class="close">X</span>
-//         <div class="lightboxInner">
-//             <img src="img/original/pexels0.jpg" alt="">
-//         </div>
-//     </div>
-
-// let imgLightbox = `<img src="img/original/pexels0.jpg" alt="">`;
 
 // click event to show original size img
 
