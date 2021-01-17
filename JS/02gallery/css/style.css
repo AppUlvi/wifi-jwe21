@@ -59,6 +59,10 @@ img {
     height: 5%
 }
 
+.close:hover {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
