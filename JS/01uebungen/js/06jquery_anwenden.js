@@ -12,6 +12,10 @@ console.log('Die Seite ist geladen');
 //     }
 // );
 
+// WIFI
+// Ulvi Ulu
+// =============================================================================
+
 $('#calc').click(
     function () {
         console.log('button clicked');

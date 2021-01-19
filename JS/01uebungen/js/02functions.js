@@ -1,3 +1,7 @@
+// WIFI
+// Ulvi Ulu
+// =============================================================================
+
 let userNameFromDatabase = 'Roland';
 
 function checkMyInput(input) {

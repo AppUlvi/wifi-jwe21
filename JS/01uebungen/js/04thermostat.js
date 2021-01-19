@@ -1,3 +1,7 @@
+// WIFI
+// Ulvi Ulu
+// =============================================================================
+
 // Die Funktion ermittelt mit den Eingabewerten
 // ob die Temperatur innerhalb der Vorgaben liegt.
 

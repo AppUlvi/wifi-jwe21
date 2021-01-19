@@ -1,3 +1,7 @@
+// WIFI
+// Ulvi Ulu
+// =============================================================================
+
 // list with img names and alt
 let images = [
     ["pexels0", "turkish coffee"],
