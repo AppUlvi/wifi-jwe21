@@ -20,6 +20,17 @@ img {
     text-align: center;
 }
 
+#gallery a img {
+    position: relative;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#gallery a img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .thumb {
     width: 300px;
     height: 250px;
