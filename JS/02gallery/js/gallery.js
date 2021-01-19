@@ -20,7 +20,7 @@ $('body > .wrapper').append(divClassLightbox);
 
 
 // output thumbs
-$(images).each(function (i) {
+$(images).each(function (i, element) {
     // console.log(images[i]);
 
     let imgTag = `<img src="img/thumbs/${images[i][0]}.jpg" alt="${images[i][1]}" class="thumb">`
@@ -46,7 +46,7 @@ $('#gallery a').click(function (e) {
 // click event to close original size img with the close button
 $('.close').click(function () {
     divClassLightbox.addClass('hide');
-    console.log('click on close')
+    console.log('click on close');
 });
 
 
@@ -84,9 +84,10 @@ $('.lightboxInner').click(function (e) {
 });
 
 
+// key event to close original size img with the escape key
 $(document).on('keydown', function (e) {
 
-    if (e.key === "Escape") {
+    if (e.keyCode === 27) {
         divClassLightbox.addClass('hide');
         console.log('Escape key pressed');
     }
