@@ -20,11 +20,10 @@ $('body > .wrapper').append(divClassLightbox);
 
 
 // output thumbs
-$(images).each(function (i, element) {
-    // console.log(images[i]);
+$(images).each(function (i) {
 
     let imgTag = `<img src="img/thumbs/${images[i][0]}.jpg" alt="${images[i][1]}" class="thumb">`
-    console.log(imgTag);
+    // console.log(imgTag);
 
     let output = `<a href="img/original/${images[i][0]}.jpg">${imgTag}</a>`;
 
@@ -93,3 +92,16 @@ $(document).on('keydown', function (e) {
     }
 
 });
+
+// different structure
+// $(document).on({
+//     'click': function () {
+//         // click event
+//     },
+//     'keydown': function (e) {
+//         // key event
+//     }
+// });
+
+
+// TODO: switch between original size img with arrow keys
