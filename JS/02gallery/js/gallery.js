@@ -105,3 +105,4 @@ $(document).on('keydown', function (e) {
 
 
 // TODO: switch between original size img with arrow keys
+// https://stackoverflow.com/questions/3149362/capture-key-press-or-keydown-event-on-div-element
