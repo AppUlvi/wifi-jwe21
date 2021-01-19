@@ -1,5 +1,4 @@
 // list with img names and alt
-
 let images = [
     ["pexels0", "turkish coffee"],
     ["pexels1", "coffee on bed"],
@@ -17,10 +16,7 @@ let gallery = $('#gallery');
 // console.log(gallery);
 
 let divClassLightbox = $(`<div id="lightbox" class="hide"> <img class="close" src="img/close.png" alt="close-button"> <div class="lightboxInner"></div> </div>`);
-
 $('body > .wrapper').append(divClassLightbox);
-
-
 
 
 // output thumbs
@@ -30,7 +26,6 @@ $(images).each(function (i) {
     let imgTag = `<img src="img/thumbs/${images[i][0]}.jpg" alt="${images[i][1]}" class="thumb">`
     console.log(imgTag);
 
-
     let output = `<a href="img/original/${images[i][0]}.jpg">${imgTag}</a>`;
 
     // gallery.html(output);
@@ -39,11 +34,7 @@ $(images).each(function (i) {
 });
 
 
-
-
-
 // click event to show original size img
-
 $('#gallery a').click(function (e) {
     e.preventDefault();
     let originalImg = $(this).attr('href');
@@ -51,11 +42,15 @@ $('#gallery a').click(function (e) {
     divClassLightbox.removeClass('hide');
 });
 
+
+// click event to close original size img with the close button
 $('.close').click(function () {
     divClassLightbox.addClass('hide');
     console.log('click on close')
 });
 
+
+// click event to close original size img with a click outside
 $('.lightboxInner').click(function (e) {
 
     // What is 'e'?
@@ -70,22 +65,30 @@ $('.lightboxInner').click(function (e) {
     // console.log(e.target);
     // e.target: <img src="img/original/pexels2.jpg" alt="">
 
-    // if (lightboxImg.is(e.target)) {
-    //     console.log('click on img');
-    // } else {
-    //     divClassLightbox.addClass('hide');
-    //     console.log('click outside img');
-    // }
-
-    if (!lightboxImg.is(e.target)) {
+    if (lightboxImg.is(e.target)) {
+        console.log('click on img');
+    } else {
         divClassLightbox.addClass('hide');
         console.log('click outside img');
     }
+
+    // if (!lightboxImg.is(e.target)) {
+    //     divClassLightbox.addClass('hide');
+    //     console.log('click outside img');
+    // }
 
     // .is(selector)Returns: Boolean
     // Description: Check the current matched set of elements against a selector, element, or jQuery object 
     //              and return true if at least one of these elements matches the given arguments.
 
-
 });
 
+
+$(document).on('keydown', function (e) {
+
+    if (e.key === "Escape") {
+        divClassLightbox.addClass('hide');
+        console.log('Escape key pressed');
+    }
+
+});
