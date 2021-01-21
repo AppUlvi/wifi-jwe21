@@ -2,10 +2,10 @@
 // Ulvi Ulu
 // =============================================================================
 
-let scrollPos = Math.floor($(document).scrollTop());
+let submitButtonPosition = $('button[type="submit"]').offset().top;
 
 $(window).scroll(function () {
-    let scrollPos = $(document).scrollTop();
+    let scrollPos = Math.floor($(document).scrollTop());
     let scrollBox = $('#scrollBox');
 
     // console.log(scrollPos);
@@ -13,27 +13,36 @@ $(window).scroll(function () {
     scrollBox.html(scrollPos);
 
 
-    if (scrollPos > 400) {
+    if (scrollPos > 600) {
         scrollBox.addClass('show');
-        if (scrollPos > 1000) {
-            scrollBox.addClass('show');
-            scrollBox.css({
-                'background-color': 'green',
-                'color': 'black'
-            });
-        } else {
-            scrollBox.css({
-                'background-color': '',
-                'color': ''
-            });
-        }
-
     } else {
         scrollBox.removeClass('show');
     }
 
+    // if (scrollPos > 800) {
+    //     scrollBox.css(
+    //         {
+    //             'background-color': 'green',
+    //             'color': 'black',
+    //         }
+    //     );
+    // } else {
+    //     scrollBox.css(
+    //         {
+    //             'background-color': '',
+    //             'color': ''
+    //         }
+    //     );
+    // }
+
     scrollBox.css({
-        'transform': 'translateY(' + scrollPos + 'px)'
+        'transform': 'translateY(' + Math.floor(scrollPos * 0.6) + 'px)',
     });
+
+    console.log(submitButtonPosition);
+
+    if (scrollPos > submitButtonPosition) {
+        console.log('sie sehen den Submit Button');
+    }
 
 });
