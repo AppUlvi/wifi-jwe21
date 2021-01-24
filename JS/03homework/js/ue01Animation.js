@@ -17,10 +17,12 @@ $(window).scroll(function () {
     scrollBox.html('<p>' + scrollPos + '</p>');
 
     if (scrollPos >= 300) {
+        console.log('scrollpos: over 300')
         box.css({
-            'border-radius': (((scrollPos - 299) / 20) + 0) + '%',
+            'border-radius': ((scrollPos - 299) / 15) + '%',
         });
     } else {
+        console.log('scrollpos: under 300')
         box.css({
             'border-radius': '0%',
         });
@@ -34,10 +36,11 @@ let cnt = -1;
 // shows the box after the first click, sets animCompl to true and sets the counter
 // else: changes text of button to count and counts 1 up after every click
 button.click(function (e) {
+    console.log('button pressed, count: ' + (cnt + 1))
 
     if (cnt === -1) {
-        $('.box.hidden').removeClass('hidden');
         cnt++
+        $('.box.hidden').removeClass('hidden');
 
         box.animate({
             width: '+=200',
