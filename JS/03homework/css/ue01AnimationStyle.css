@@ -1,9 +1,8 @@
 :root {
-    --backgroundC: #1CD3F8;
+    --bc1: #1fabc7;
+    --bc2: #1f889d;
     --c1: #FFE800;
-    --c2: #404040;
-    --angle: 8px;
-    --angle-o: 4px;
+    --c2: #463333;
 }
 
 html, body {
@@ -11,7 +10,7 @@ html, body {
 }
 
 body {
-    background-color: var(--backgroundC);
+    background-color: var(--bc1);
     font-size: 100%;
 }
 
@@ -33,7 +32,7 @@ p {
     width: 50px;
     height: 500px;
     margin-bottom: 5px;
-    background-color: #17a4c0;
+    background-color: var(--bc2);
 }
 
 /* BOX */
@@ -55,7 +54,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: -10px 10px var(--c2);
+    box-shadow: -6px 6px var(--c2);
 }
 
 .box p {
@@ -70,9 +69,9 @@ p {
     left: 8px;
     width: 100px;
     height: 50px;
-    background-color: var(--backgroundC);
-    color: #17a4c0;
-    border: 5px solid #17a4c0;
+    background-color: var(--bc1);
+    color: var(--bc2);
+    border: 5px solid var(--bc2);
     text-align: center;
     display: flex;
     align-items: center;
@@ -88,65 +87,21 @@ p {
     right: 20px;
 }
 
-/* Button: https://codepen.io/screenthink/pen/ZeOyjP  */
-
 .btn {
+    position: relative;
     top: 0;
     left: 0;
-    transition: all .15s linear 0s;
-    position: relative;
-    display: inline-block;
-    padding: 15px 25px;
+    padding: 20px 30px;
     background-color: var(--c1);
-    text-transform: uppercase;
+    box-shadow: -6px 6px 0 var(--c2);
     color: var(--c2);
     letter-spacing: 1px;
-    box-shadow: -6px 6px 0 var(--c2);
-    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .15s linear 0s;
 }
 
 .btn:hover {
     top: 3px;
     left: -3px;
     box-shadow: -3px 3px 0 var(--c2);
-}
-
-.btn:hover::after {
-    top: 1px;
-    left: -2px;
-    width: var(--angle-o);
-    height: var(--angle-o);
-}
-
-.btn:hover::before {
-    bottom: -2px;
-    right: 1px;
-    width: var(--angle-o);
-    height: var(--angle-o);
-}
-
-.btn::after {
-    transition: all 0.15s linear 0s;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: -4px;
-    width: var(--angle);
-    height: var(--angle);
-    background-color: var(--c2);
-    transform: rotate(45deg);
-    z-index: -1;
-}
-
-.btn::before {
-    transition: all 0.15s linear 0s;
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    right: 2px;
-    width: var(--angle);
-    height: var(--angle);
-    background-color: var(--c2);
-    transform: rotate(45deg);
-    z-index: -1;
 }

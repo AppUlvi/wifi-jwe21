@@ -18,7 +18,7 @@
     2. Beim Scrollen nach unten wird ab einer Scroll-Position von 300px (von oben) die Box zu einem Kreis
     3. Bei jedem Klick auf den Button erhöht sich die Zahl in der Box -->
 
-    <!-- Scroll -->
+    <!-- ScrollSideBar -->
     <div class="container">
         <div class="scroll"></div>
         <div class="scroll"></div>
@@ -27,20 +27,21 @@
         <div class="scroll"></div>
     </div>
 
+    <!-- ScrollBox indicates scroll position -->
+    <div id="scrollBox">
+        <p>0</p>
+    </div>
+
     <!-- Box -->
     <div class="box hidden"></div>
 
     <!-- Button -->
     <div class="btnPos">
         <div class='btn'>
-            <p>SHOW</p>
+            <p>show</p>
         </div>
     </div>
 
-    <!-- ScrollBox -->
-    <div id="scrollBox">
-        <p>0</p>
-    </div>
 
     <!-- jquery core script einfügen -->
     <script src="js/.vendor/jquery-3.5.1.js"></script>
