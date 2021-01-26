@@ -3,8 +3,8 @@
 // =============================================================================
 
 // die Variable für die Punktezahl der Validität muss Global definiert sein
-let fUsernameIsValid;
 let fUsername = $('#username');
+let fUsernameIsValid;
 
 fUsername.keyup(function () {
 
@@ -44,14 +44,54 @@ fUsername.keyup(function () {
         fUsernameIsValid = 0;
     }
 
+});
+
+// dynamische Ausgabe von HTML (Formular Felder)
+
+let fChildren = $('#children');
+let fChildrenAges = $('#children_ages');
+
+fChildren.change(function () {
+
+    let amount = $(this).val();
+    fChildrenAges.html('');
+
+    for (let i = 0; i < amount; i++) {
+        console.log('Kind ' + (i + 1));
+
+        let input = `<input type="text" id="child_${i + 1}_age" class="form-control child_age" required>`;
+        input = `<label class="form-label" for="child_${i + 1}_age">Alter Kind ${i + 1}:</label>${input}`;
+        input = `<div class="row child"><div class="col-3">${input}</div></div>`;
+
+        fChildrenAges.append(input);
+    }
 
 });
 
+
 let fSubmit = $('#checkoutSubmit');
+let fChildrenAgesIsValid;
+
 fSubmit.click(function (e) {
 
+    fChildrenAgesIsValid = 0;
+
+    $('input.child_age').each(function () {
+
+        let field = $(this);
+        if (field.val()) {
+            // aktuelles Feld wurde gesetzt
+            // positiver Rückgabewert (oder Variable wird um ein Punkt erhöht)
+            fChildrenAgesIsValid++;
+        }
+
+    });
+
+    // console.log(fChildrenAgesIsValid); //DEBUG
+    // console.log(fChildren.val()); //DEBUG
+
     // Treffen alle 3 Bedingungen zu dann ist das Feld "username" korrekt ausgefüllt
-    if (fUsernameIsValid == 3) {
+    if (fChildrenAgesIsValid == fChildren.val() && fUsernameIsValid == 3) {
         $(this).closest('form').submit();
         return true;
     } else {
@@ -59,4 +99,5 @@ fSubmit.click(function (e) {
         return false;
     }
 
-}); 
+
+});

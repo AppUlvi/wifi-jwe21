@@ -28,9 +28,10 @@
 
         Dynamische Formularfelder
             - Anzahl der Kinder + Kinderalter
-            - Zeichenzähler    
+            - Zeichenzähler (Plugin)
+            - Cookies in Javascript
+            - AJAX (Asynchrone Abfragen)
 
-        Cookies in Javascript
 
      -->
 
@@ -205,6 +206,42 @@
                         </div>
 
                         <hr class="my-4">
+
+                        <!-- dynamische Ausgabe von Formularfeldern <input id="child_1" required> 
+                            abhängig von einer Auswahl eines Feldes "children" -->
+
+                        <div class="col-md-3">
+                            <label for="children" class="form-label">Anzahl der Kinder</label>
+                            <select class="form-select" id="children" required>
+                                <option value="">Choose...</option>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide the number of your children
+                            </div>
+                        </div>
+
+
+                        <!-- Kinder Alter Felder (dynamisch auf Javascript erzeugt) -->
+                        <div class="col-12" id="children_ages">
+
+                            <!-- <div class="row child">
+                                <div class="col-3">
+                                    <label class="form-label" for="child_1_age">Alter Kind 1:</label>
+                                    <input type="text" id="child_1_age" class="form-control" required>
+                                </div>
+                            </div> -->
+
+                        </div>
+
+
+                        <hr class="my-4">
+
 
                         <h4 class="mb-3">Payment</h4>
 
