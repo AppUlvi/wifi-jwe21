@@ -43,8 +43,8 @@ p {
 
 .box {
     position: fixed;
-    top: calc(50vh - 100px);
-    right: calc(50vw - 100px);
+    top: 50vh;
+    right: 50vw;
     width: 0px;
     height: 0px;
     background-color: var(--c1);
