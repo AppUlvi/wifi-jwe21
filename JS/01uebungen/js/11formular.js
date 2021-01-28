@@ -6,6 +6,7 @@
 let fUsername = $('#username');
 let fUsernameIsValid;
 
+// Valid Username
 fUsername.keyup(function () {
 
     // Zu Beginn der Prüfung muss die Punktezahl auf 0 gesetzt werden
@@ -47,7 +48,6 @@ fUsername.keyup(function () {
 });
 
 // dynamische Ausgabe von HTML (Formular Felder)
-
 let fChildren = $('#children');
 let fChildrenAges = $('#children_ages');
 
@@ -68,7 +68,18 @@ fChildren.change(function () {
 
 });
 
+let fMessage = $('#message');
+let counter = $('#counter');
 
+fMessage.keyup(function () {
+    let count = fMessage.val().length;
+
+    counter.html(count);
+
+
+})
+
+// Check Submit
 let fSubmit = $('#checkoutSubmit');
 let fChildrenAgesIsValid;
 
