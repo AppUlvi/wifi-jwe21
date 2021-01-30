@@ -1,0 +1,167 @@
+:root {
+    --bc1: #f8f8f8;
+    --c1: #14a6e4;
+    --c1a: #14a6e47c;
+    --c2: #40d32d;
+    --c2a: #40d32d82;
+    --c3: #c51e1e;
+    --c3a: #c51e1e83;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    font-size: 100%;
+    background: rgb(0, 10, 36);
+    background: linear-gradient(0deg, rgba(0, 10, 36, 1) 0%, rgba(9, 121, 108, 1) 58%, rgba(0, 255, 220, 1) 100%);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 150%;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* WRAPPING */
+
+#app {
+    width: 400px;
+    min-height: 800px;
+    margin: 100px auto;
+    padding: 50px 50px;
+    background-color: var(--bc1);
+    border-radius: 20px;
+}
+
+/* TOP */
+
+#app>div:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 240px auto;
+    justify-items: center;
+}
+
+.app_section h1 {
+    margin: 25px 0;
+    text-transform: uppercase;
+    font-size: 300%;
+    grid-column: 1 / span 2;
+}
+
+#cart_icon {
+    width: 80px;
+    height: 80px;
+    justify-self: right;
+}
+
+#count_items {
+    justify-self: left;
+    width: 30px;
+    height: 30px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADD - MIDDLE */
+
+#app>div:nth-of-type(2) {
+    margin: 25px 0 50px;
+    display: grid;
+    width: 400px;
+    grid-template-columns: auto 50px;
+    grid-column-gap: 5px;
+}
+
+#text_field {
+    height: 46px;
+    padding: 0 20px;
+    margin: 0;
+    font-size: 120%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#add_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 180%;
+    background-color: var(--c1a);
+    border-color: var(--c1);
+}
+
+#add_button:hover {
+    background-color: var(--c1);
+}
+
+/* ADD - MIDDLE */
+
+.app_list {
+    margin: 10px 0;
+    display: grid;
+    width: 400px;
+    grid-template-columns: 40px auto 40px;
+    grid-column-gap: 4px;
+}
+
+#check_button {
+    background-color: var(--c2a);
+    border-color: var(--c2);
+}
+
+#check_button:hover {
+    background-color: var(--c2);
+}
+
+#minus_button {
+    background-color: var(--c3a);
+    border-color: var(--c3);
+}
+
+#minus_button:hover {
+    background-color: var(--c3);
+}
+
+.app_list>p {
+    height: 36px;
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 4px;
+    line-height: 34px;
+    font-size: 120%;
+    padding: 0 20px;
+    color: rgb(116, 116, 116);
+}
+
+/* 
+add css after check button -> js 
+
+.app_list>p {
+    color: rgba(116, 116, 116, 0.4);
+    border-color: var(--c2a);
+} 
+*/

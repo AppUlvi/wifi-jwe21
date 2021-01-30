@@ -34,23 +34,38 @@
     <div id="wrapper">
 
         <div id="app">
-            <div>
-                <img src="img/cart.png" alt="shopping cart icon">
-                <div id=count_items>1</div>
+            <div class="app_section">
+                <img id="cart_icon" src="img/cart.png" alt="shopping cart icon">
+                <!-- hidden counter -> js -->
+                <div class="hidden" id=count_items>
+                    <p>1</p>
+                </div>
                 <h1>shopping list</h1>
             </div>
 
-            <div>
-                <input type="text" id="text_field" name="text_field">
-                <img src="img/plus.png" alt="add button">
+            <div class="app_section">
+                <input type="text" id="text_field" name="text_field" placeholder="Add your new item">
+                <!-- fullwidth + sign  -->
+                <button id="add_button">&#65291;</button>
             </div>
 
-            <hr>
-
-            <div>
-                <img src="img/checkmark.png" alt="check button">
+            <div class="app_list">
+                <button id="check_button">&check;</button>
                 <p>Butter</p>
-                <img src="img/minus.png" alt="delete button">
+                <!-- fullwidth - sign  -->
+                <button id="minus_button">&#65293;</button>
+            </div>
+            <div class="app_list">
+                <button id="check_button">&check;</button>
+                <p>Bananen</p>
+                <!-- fullwidth - sign  -->
+                <button id="minus_button">&#65293;</button>
+            </div>
+            <div class="app_list">
+                <button id="check_button">&check;</button>
+                <p>Birnen</p>
+                <!-- fullwidth - sign  -->
+                <button id="minus_button">&#65293;</button>
             </div>
         </div>
     </div>
