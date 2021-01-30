@@ -121,7 +121,7 @@ button {
 
 /* ADD - MIDDLE */
 
-.app_list {
+.app_list_item {
     margin: 10px 0;
     display: grid;
     width: 400px;
@@ -147,7 +147,7 @@ button {
     background-color: var(--c3);
 }
 
-.app_list>p {
+.app_list_item>p {
     height: 36px;
     border: 2px solid rgb(116, 116, 116);
     border-radius: 4px;
