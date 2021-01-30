@@ -13,9 +13,16 @@ html, body {
 }
 
 body {
+    min-height: 100vh;
+    margin: 0;
     font-size: 100%;
     background: rgb(0, 10, 36);
     background: linear-gradient(0deg, rgba(0, 10, 36, 1) 0%, rgba(9, 121, 108, 1) 58%, rgba(0, 255, 220, 1) 100%);
+}
+
+#wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 p {
@@ -47,7 +54,7 @@ button {
 
 #app {
     width: 400px;
-    min-height: 800px;
+    /* min-height: 800px; */
     margin: 100px auto;
     padding: 50px 50px;
     background-color: var(--bc1);
@@ -106,6 +113,11 @@ button {
     border: 2px solid black;
 }
 
+#text_field:focus {
+    outline: none;
+    border-color: var(--c1);
+}
+
 #add_button {
     width: 50px;
     height: 50px;
@@ -129,21 +141,21 @@ button {
     grid-column-gap: 4px;
 }
 
-#check_button {
+.check_button {
     background-color: var(--c2a);
     border-color: var(--c2);
 }
 
-#check_button:hover {
+.check_button:hover {
     background-color: var(--c2);
 }
 
-#minus_button {
+.minus_button {
     background-color: var(--c3a);
     border-color: var(--c3);
 }
 
-#minus_button:hover {
+.minus_button:hover {
     background-color: var(--c3);
 }
 
@@ -157,11 +169,7 @@ button {
     color: rgb(116, 116, 116);
 }
 
-/* 
-add css after check button -> js 
-
-.app_list>p {
-    color: rgba(116, 116, 116, 0.4);
-    border-color: var(--c2a);
-} 
-*/
+.check {
+    color: rgba(116, 116, 116, 0.4) !important;
+    border-color: var(--c2a) !important;
+}
