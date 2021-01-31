@@ -9,7 +9,6 @@ let list = [];
 // MAIN
 // =============================================================================
 
-// 
 inputField.keyup(function (e) {
     // keyCode of "Enter" is 13
     if (e.keyCode === 13) {
@@ -138,7 +137,7 @@ function checkMyInput(input) {
 }
 
 // searches a given array for a given item
-// if it exist returns index of item if not returns "-1"
+// if it exists returns index of item if not returns "-1"
 // only for two dimensional arrays and only for the first column
 function searchArrayForItem(array, item) {
     for (let i = 0; i < array.length; i++) {
