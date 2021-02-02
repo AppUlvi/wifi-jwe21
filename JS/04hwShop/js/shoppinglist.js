@@ -15,7 +15,7 @@ inputField.keyup(function (e) {
         let input = inputField.val();
 
         // if input is correct run functions
-        if (checkMyInput(input)) {
+        if (appendListIfInputValid(input)) {
             addHTML(list);
             deleteItem(list);
             checkItem(list);
@@ -31,7 +31,7 @@ $('#add_button').click(function () {
     let input = inputField.val();
 
     // if input is correct run functions
-    if (checkMyInput(input)) {
+    if (appendListIfInputValid(input)) {
         addHTML(list);
         deleteItem(list);
         checkItem(list);
@@ -52,8 +52,8 @@ function addHTML(array) {
         } else {
             listItems += `<div class="app_list_item"><button class="check_button">&check;</button><p class="app_list_item_name check">${elm[0]}</p><button class="minus_button">&#65293;</button></div>`;
         }
-        $('#app_list').html(listItems);
     });
+    $('#app_list').html(listItems);
 }
 
 // LIST BUTTON FUNCTIONS
@@ -123,13 +123,14 @@ function countListItems(array) {
     }
 }
 
-// checks the input for duplicate or empty values
-function checkMyInput(input) {
-    // capitalize the first character of a string
-    // info: slice() slices the string and returns it starting from the given index
-    input = input.charAt(0).toUpperCase() + input.slice(1);
+// appends list array and checks input for duplicate or empty values and corrects it 
+function appendListIfInputValid(input) {
+    // info:    slice() slices the string and returns it starting from the given index
+    //          toUpperCase() converts a string to uppercase letters.
+    //          toLowerCase() converts a string to lowercase letters.
+    input = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
 
-    // returns true if no duplicate or empty values else returns false
+    // appends list array and returns true if no duplicate or empty values else returns false
     if (searchArrayForItem(list, input) == -1 && input != '') {
         list.push([input, 'noCheck']);
         return true;
