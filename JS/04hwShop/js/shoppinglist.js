@@ -16,7 +16,7 @@ inputField.keyup(function (e) {
 
         // if input is correct run functions
         if (appendListIfInputValid(input)) {
-            addHTML(list);
+            addHTML();
             deleteItem(list);
             checkItem(list);
             countListItems(list);
@@ -32,7 +32,7 @@ $('#add_button').click(function () {
 
     // if input is correct run functions
     if (appendListIfInputValid(input)) {
-        addHTML(list);
+        addHTML();
         deleteItem(list);
         checkItem(list);
         countListItems(list);
@@ -43,10 +43,10 @@ $('#add_button').click(function () {
 });
 
 // adds html code to the empty app_list div
-function addHTML(array) {
+function addHTML() {
 
     let listItems = '';
-    array.forEach(elm => {
+    list.forEach(elm => {
         if (elm[1] == 'noCheck') {
             listItems += `<div class="app_list_item"><button class="check_button">&check;</button><p class="app_list_item_name">${elm[0]}</p><button class="minus_button">&#65293;</button></div>`;
         } else {
@@ -66,10 +66,12 @@ function deleteItem(array) {
         // adds a click event to the specific delete button
         deleteButton.click(function (e) {
             // selects parent of the button
-            let parent = e.target.parentNode;
+            // e.target.parentNode;
+            let parent = $(this).parent();
             // select content from p-tag
-            let content = parent.children[1].textContent;
-            // see below: searchArrayForDuplicateItem(array, item)
+            // parent.children[1].textContent;
+            let content = parent.children().first().text();
+            // see below: searchArrayForItem(array, item)
             let index = searchArrayForItem(array, content);
 
             // deletes array at click/index position
