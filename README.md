@@ -26,7 +26,6 @@ Grundlagen der Programmierung in PHP
 ## PHP II <a name="5"></a>
 PHP und Datenbanken MySQL / MariaDB
 
-
 ## PHP III <a name="6"></a>
 Objektorientiertes Programmieren in PHP
 
