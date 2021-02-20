@@ -21,7 +21,6 @@
 
     $stunde = date("G");
 
-
     if ($stunde >= 0 && $stunde <= 5) {
         echo "Schlaf gut";
     } else if ($stunde >= 6 && $stunde <= 9) {
@@ -34,7 +33,18 @@
         echo "Hallo";
     }
 
-
+    // Kürzer
+    if ($stunde == 12 || $stunde == 18) {
+        echo "Mahlzeit";
+    } else if ($stunde <= 5) {
+        echo "Schlaf gut";
+    } else if ($stunde <= 9) {
+        echo "Guten Morgen";
+    } else if ($stunde <= 23) {
+        echo "Gute Nacht";
+    } else {
+        echo "Hallo";
+    }
 
     ?>
 

@@ -36,7 +36,6 @@
     echo "</pre>";
     echo "<br>";
 
-
     // Assoziatives Array definieren und verwenden (Index ein Text!)
     $person = array(
         "name" => "Max",
@@ -57,20 +56,19 @@
     echo "</pre>";
     echo "<br>";
 
-
+    // Mehrdimensionale Arrays (verschachtelt)
     $personen = array(
 
         array(
             "name" => "Herbert",
             "alter" => 33,
-            "ort" => array("Linz", "Wien", "Graz")
+            "ort" => array("Heimat" => "Linz", "Ausbildung" => "Wien", "Freundschaft" => "Graz")
         ),
         array(
             "name" => "Sarah",
             "alter" => 27,
         )
     );
-
 
     $personen[] = $person;
 
@@ -79,15 +77,15 @@
     echo "</pre>";
     echo "<br>";
 
-    $personen[1]["ort"] = "Bregenz";
+    $personen[1]["ort"] = array("Heimat" => "Bregenz", "Ausbildung" => "Wien");
+    $personen[1]["ort"]["Ausbildung"] = "Salzburg";
 
     echo "<pre>";
     print_r($personen);
     echo "</pre>";
     echo "<br>";
 
-    echo $personen[0]["ort"][2];
-
+    echo $personen[0]["ort"]["Freundschaft"];
 
     ?>
 
