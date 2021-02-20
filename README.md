@@ -1,4 +1,4 @@
-# Ausbildung Junior Web Frontend-/Backend-Entwickler (JWE)
+# Ausbildung Junior Web Frontend-/Backend-Entwickler
 
 Übungen zum WIFI Lehrgang.
 
