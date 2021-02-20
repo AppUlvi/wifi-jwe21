@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+
+    <title>Taschenrechner</title>
+
+    <style>
+        label {
+            margin-bottom: 2em;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label>Zahl 1 =<input type="text" id="num1" class="number"></label>
+
+    <label>Operator:
+        <select name="operator" id="operator">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+    </label>
+
+    <label>Zahl 2 =<input type="text" id="num2" class="number"></label>
+    <label>Zahl 3 =<input type="text" class="number"></label>
+    <label>Zahl 4 =<input type="text" class="number"></label>
+
+    <button id="button-calc">Berechnen</button>
+    <button id="button-sum">Summe berechnen</button>
+    <button id="button-product">Product berechnen</button>
+
+    <label>Ergebnis=<input readonly type="number" id="result"></label>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
