@@ -1,0 +1,80 @@
+/* Tag Selektor */
+
+body {
+    background-color: #e3e3e3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+table.special-design {
+    border: 2px solid #0000ff;
+    border-top: 5px solid green;
+    border-bottom-width: 10px;
+    border-bottom-style: dashed;
+}
+
+table.simple tr td {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+table.simple {
+    border-width: 3px 10px 25px 0;
+    border-style: solid;
+    border-color: purple;
+}
+
+#schlimmster-tag {
+    color: red;
+    font-weight: bold;
+}
+
+.schoener-tag {
+    color: green;
+    font-weight: bold;
+}
+
+/* beautiful */
+
+table.beautiful {
+    margin-bottom: 20px;
+}
+
+table.beautiful th {
+    background: orange;
+}
+
+table.beautiful td {
+    background: lightgrey;
+}
+
+table.beautiful th, table.beautiful td {
+    padding: 10px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+table.beautiful thead th:nth-child(1) {
+    border-top-left-radius: 10px;
+}
+
+table.beautiful thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table.beautiful tfoot td {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.aktion td:first-child {
+    border-radius: 10px;
+    border: 2px dashed red;
+}

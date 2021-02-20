@@ -1,0 +1,37 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tablet, .desktop {
+    display: none;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+}
+
+@media (min-width: 440px) {
+    h1 {
+        color: greenyellow;
+    }
+    .phone {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+}
+
+@media (min-width: 900px) {
+    h1 {
+        color: sienna;
+    }
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
