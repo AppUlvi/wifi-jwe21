@@ -10,7 +10,6 @@ function enqueue(element) {
 }
 
 function dequeue() {
-    console.log('test');
     return queue.shift();
 }
 
