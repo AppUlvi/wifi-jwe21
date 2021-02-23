@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+
+    <title>Queue</title>
+</head>
+
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    .user-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main>div>div {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>Datenstrukturen in JavaScript</h1>
+    </header>
+
+    <main>
+        <div class="user-input">
+
+            <div>
+                <label>Wert
+                    <input type="text" id="input-value">
+                </label>
+
+            </div>
+
+            <div>
+                <button id="enqueue-button">Enqueue</button>
+                <button id="dequeue-button">Dequeue</button>
+                <button id="push-button">Push</button>
+                <button id="pop-button">Pop</button>
+            </div>
+
+            <div>
+                <label>Action:
+                    <input readonly type="text" id="action-value">
+                </label>
+            </div>
+
+            <div>
+                <label>Dequeue Value:
+                    <input readonly type="text" id="dequeue-value">
+                </label>
+            </div>
+
+            <div>
+                <label>Pop Value:
+                    <input readonly type="text" id="pop-value">
+                </label>
+            </div>
+
+            <div>
+                <label>Queue:
+                    <input readonly type="text" id="queue-list">
+                </label>
+            </div>
+
+            <div>
+                <label>Stack:
+                    <input readonly type="text" id="stack-list">
+                </label>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
