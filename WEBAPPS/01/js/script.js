@@ -77,6 +77,6 @@ function product() {
 // const button = document.querySelector('#button-calc');
 // button.addEventListener('click', calculate);
 
-document.querySelector('#button-calc').addEventListener('click, calculate');
+document.querySelector('#button-calc').addEventListener('click', calculate);
 document.querySelector('#button-sum').addEventListener('click', sum);
 document.querySelector('#button-product').addEventListener('click', product);
