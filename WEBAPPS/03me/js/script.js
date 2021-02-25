@@ -2,45 +2,59 @@
 // Ulvi Ulu
 // =============================================================================
 
-let arr = [];
+let randomList;
 
-function generateRandomArray() {
-
-    arr = [];
-
-    const valStart = parseFloat(document.querySelector('#start-value').value);
-    const valEnd = parseFloat(document.querySelector('#end-value').value);
-    const arrLength = parseFloat(document.querySelector('#array-length').value);
+function onGenerateClick() {
+    let valStart = parseFloat(document.querySelector('#start-value').value);
+    let valEnd = parseFloat(document.querySelector('#end-value').value);
+    let arrLength = parseFloat(document.querySelector('#array-length').value);
 
     if (arrLength > 0 && valStart <= valEnd) {
-        for (let i = 0; i < arrLength; i++) {
-            // https://www.w3schools.com/js/js_random.asp
-            // This JavaScript function always returns a random number between min and max (both included):
-            arr[i] = Math.floor(Math.random() * (valEnd - valStart + 1)) + valStart;
-        }
-        document.querySelector('#output').textContent = arr.join(', ')
+
+        let startTime = performance.now();
+        randomList = generateRandomList(valStart, valEnd, arrLength);
+        console.log((performance.now() - startTime) + "ms");
+
+        document.querySelector('#output').textContent = randomList.join(', ');
     } else
         document.querySelector('#output').textContent = "error";
 
 }
 
-function searchForValueInArray() {
+function generateRandomList(valStart, valEnd, arrLength) {
+    let list = [];
+    for (let i = 0; i < arrLength; i++) {
+        // https://www.w3schools.com/js/js_random.asp
+        // This JavaScript function always returns a random number between min and max (both included):
+        list[i] = Math.floor(Math.random() * (valEnd - valStart + 1)) + valStart;
+    }
+    return list;
+}
 
+// Search
+function onSearchClick() {
     const valSearch = parseFloat(document.querySelector('#search-value').value);
 
-    let count = 0;
+    if (isInList(valSearch)) {
+        let count = 0;
+        for (let i = 0; i < randomList.length; i++)
+            if (valSearch === randomList[i])
+                count++;
 
-    for (let i = 0; i < arr.length; i++)
-        if (valSearch === arr[i])
-            count++;
-
-    if (count > 0)
         document.querySelector('#found-value').value = count;
-    else
+    } else
         document.querySelector('#found-value').value = 'not found';
 
 }
 
+function isInList(valSearch) {
+    for (let i = 0; i < randomList.length; i++)
+        if (valSearch === randomList[i])
+            return true;
 
-document.querySelector('#btn-generate').addEventListener('click', generateRandomArray);
-document.querySelector('#btn-search').addEventListener('click', searchForValueInArray);
+    return false;
+}
+
+
+document.querySelector('#btn-generate').addEventListener('click', onGenerateClick);
+document.querySelector('#btn-search').addEventListener('click', onSearchClick);

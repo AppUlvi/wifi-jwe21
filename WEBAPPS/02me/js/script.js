@@ -42,7 +42,6 @@ function onDequeueButtonClick() {
     }
 }
 
-
 // STACK
 const stack = [];
 
