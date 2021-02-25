@@ -1,0 +1,34 @@
+body {
+    margin: 0 auto;
+    max-width: 840px;
+}
+
+h1, h2 {
+    font-family: sans-serif;
+}
+
+.data-structure {
+    border: 1px solid #333;
+    padding: 0 .5em;
+}
+
+.user-input {
+    border-bottom: 1px solid #333;
+}
+
+.operation {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+.output {
+    padding: 1em;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.warn {
+    color: red;
+    font-weight: bolder;
+}

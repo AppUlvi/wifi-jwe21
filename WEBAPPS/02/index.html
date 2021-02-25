@@ -6,23 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
 
-    <title>Queue</title>
+    <title>Queue and Stack</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<style>
-    body {
-        background-color: lightblue;
-    }
-
-    .user-input {
-        display: flex;
-        flex-direction: column;
-    }
-
-    main>div>div {
-        margin-bottom: 10px;
-    }
-</style>
 
 <body>
 
@@ -31,52 +18,46 @@
     </header>
 
     <main>
-        <div class="user-input">
+        <div id="queue" class="data-structure">
+            <h2>Queue</h2>
 
-            <div>
-                <label>Wert
-                    <input type="text" id="input-value">
-                </label>
-
+            <div class="user-input">
+                <div class="operation enqueue">
+                    <label>Wert:
+                        <input type="text" id="enqueue-value">
+                    </label>
+                    <button id="enqueue-button">Enqueue</button>
+                </div>
+                <div class="operation dequeue">
+                    <button id="dequeue-button">Dequeue</button>
+                    <div id="dequeue-value">Wert:</div>
+                </div>
             </div>
 
-            <div>
-                <button id="enqueue-button">Enqueue</button>
-                <button id="dequeue-button">Dequeue</button>
-                <button id="push-button">Push</button>
-                <button id="pop-button">Pop</button>
+            <div class="output">
+                Queue:
+            </div>
+        </div>
+
+        <div id="stack" class="data-structure">
+            <h2>Stack</h2>
+
+            <div class="user-input">
+                <div class="operation push">
+                    <label>Wert:
+                        <input type="text" id="push-value">
+                    </label>
+                    <button id="push-button">Push</button>
+                </div>
+                <div class="operation pop">
+                    <button id="pop-button">Pop</button>
+                    <div id="pop-value">Wert:</div>
+                </div>
             </div>
 
-            <div>
-                <label>Action:
-                    <input readonly type="text" id="action-value">
-                </label>
+            <div class="output">
+                Stack:
             </div>
-
-            <div>
-                <label>Dequeue Value:
-                    <input readonly type="text" id="dequeue-value">
-                </label>
-            </div>
-
-            <div>
-                <label>Pop Value:
-                    <input readonly type="text" id="pop-value">
-                </label>
-            </div>
-
-            <div>
-                <label>Queue:
-                    <input readonly type="text" id="queue-list">
-                </label>
-            </div>
-
-            <div>
-                <label>Stack:
-                    <input readonly type="text" id="stack-list">
-                </label>
-            </div>
-
         </div>
     </main>
 

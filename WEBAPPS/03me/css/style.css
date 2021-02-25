@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    width: 100px;
+}
+
+#output{
+    width: 500px;
+}

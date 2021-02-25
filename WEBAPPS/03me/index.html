@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Array</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Array erstellen</h1>
+    </header>
+
+    <main>
+
+        <div class="labels">
+            <label>Untere Schranke des Arrays
+                <input class="input" type="text" id="start-value">
+            </label>
+            <label>Obere Schranke des Arrays
+                <input class="input" type="text" id="end-value">
+            </label>
+            <label>Länge des Arrays
+                <input class="input" type="text" id="array-length">
+            </label>
+        </div>
+
+        <div>
+            <button id="btn-generate">Erzeugen</button>
+        </div>
+
+        <div id="output">
+        </div>
+
+        <div class="labels">
+            <label>Nach Wert suchen
+                <input class="input" type="text" id="search-value">
+            </label>
+        </div>
+
+        <div>
+            <button id="btn-search">Suchen</button>
+        </div>
+
+        <div class="labels">
+            <label>Gefunden
+                <input class="input" readonly type="text" id="found-value">
+            </label>
+        </div>
+
+
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
