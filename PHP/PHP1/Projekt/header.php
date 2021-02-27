@@ -17,7 +17,7 @@
                     echo " class='active'";
                 }
 
-                echo "><a href='index.php'>{$nav_punkt}</a></li>";
+                echo '><a href=?seite=' . $href . '>' . $nav_punkt . '</a></li>';
             }
 
             ?>
