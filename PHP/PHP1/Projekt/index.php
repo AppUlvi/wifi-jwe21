@@ -13,11 +13,41 @@
 
     <?PHP
 
-    // HTML blockweise wieder zusammensetzen
+    echo "<pre>";
+    print_r($_GET);
+    echo "</pre>";
 
+    if (empty($_GET["seite"])) {
+        $seite = "home";
+    } else {
+        $seite = $_GET["seite"];
+    }
+
+    // Die einzubindende content-datei ermitteln
+    switch ($seite) {
+        case "home":
+            $include_datei = "home.php";
+            break;
+        case "leistungen":
+            $include_datei = "leistungen.php";
+            break;
+        case "kontakt":
+            $include_datei = "kontakt.php";
+            break;
+        case "oeffnungszeiten":
+            $include_datei = "oeffnungszeiten.php";
+            break;
+
+        default:
+            break;
+    }
+
+
+    // HTML blockweise wieder zusammensetzen
     include "header.php";
 
-    include "content/home.php";
+    // Seitenspezifischer Inhalt
+    include "content/" . $include_datei;
 
     include "footer.php";
 

@@ -19,7 +19,7 @@
     $benutzername = "christian.09";
 
     function checkUsername($username) {
-        if (!preg_match("/[^0-9a-z\.]/", $username)) {
+        if (preg_match("/^[0-9a-z\.]/", $username)) {
             echo "Der Benutzername ist zulässig";
         } else {
             echo "Der Benutzername ist unzulässig. Bitte verwenden Sie nur 0-9, a-z und Punkte";
@@ -32,6 +32,10 @@
     echo "<br>";
     checkUsername("Chr!@st!an.09");
     echo "<br>";
+
+    // echo preg_match("/0-9/", 'abc');
+    // echo preg_match("/[a-z0-9]/", 'abc');
+    // echo preg_match("/[a-z]/", 'abc');
 
     ?>
 

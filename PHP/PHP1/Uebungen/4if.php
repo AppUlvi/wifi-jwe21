@@ -33,6 +33,8 @@
         echo "Hallo";
     }
 
+    echo "<br>";
+
     // Kürzer
     if ($stunde == 12 || $stunde == 18) {
         echo "Mahlzeit";
@@ -44,6 +46,26 @@
         echo "Gute Nacht";
     } else {
         echo "Hallo";
+    }
+
+    echo "<br>";
+
+    // Switch
+    switch ($stunde) {
+        case ($stunde == 12 || $stunde == 18):
+            echo "Mahlzeit";
+            break;
+        case $stunde <= 5:
+            echo "Schlaf gut";
+            break;
+        case $stunde <= 9:
+            echo "Guten Morgen";
+            break;
+        case $stunde <= 23:
+            echo "Gute Nacht";
+            break;
+        default:
+            "Hallo";
     }
 
     ?>
