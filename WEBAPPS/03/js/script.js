@@ -16,7 +16,6 @@ function onSearchClick() {
 
     let start = performance.now();
     const isInList = randomList.isInList(value);
-    const isInListTime = performance.now() - start;
 
     let output = document.querySelector('#search-output');
     if (isInList) {

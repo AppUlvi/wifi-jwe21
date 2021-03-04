@@ -15,20 +15,52 @@ class RandomList {
      */
     constructor(min, max, length) {
         this._list = [];
+        // Option 3:
+        // this._set = new Set();
+
+        // Option 4:
+        this._map = new Map();
 
         for (let i = 0; i < length; i++) {
-            this._list.push(randomInt(min, max));
-        }
-    }
+            const randomNumber = randomInt(min, max);
+            this._list.push(randomNumber);
+            // Option 3: Zusätzliche Erzeugung eines Sets
+            // this._set.add(randomNumber);
 
-    isInList(value) {
-        for (let i = 0; i < this._list.length; i++) {
-            if (this._list[i] === value) {
-                return true;
+            // Option 4: Map updaten
+            if (this._map.has(randomNumber)) {
+                const cnt = this._map.get(randomNumber);
+                this._map.set(randomNumber, cnt + 1);
+            } else {
+                this._map.set(randomNumber, 1);
             }
         }
 
-        return false;
+        // Option 2: Sortieren der Liste
+        // this._list.sort(function compare(a, b) {
+        //     return a - b;
+        // });
+    }
+
+    isInList(value) {
+        // // Option 1: suchen in der Liste nach einem Wert
+        // for (let i = 0; i < this._list.length; i++) {
+        //     if (this._list[i] === value) {
+        //         return true;
+        //     }
+        //     // Option 2: abbrechen, wenn der Wert in einer geordneten Liste nicht mehr gefunden werden kann
+        //     else if (this._list[i] > value) {
+        //         return false;
+        //     }
+        // }
+
+        // return false;
+
+        // Option 3: Nutzen von Set
+        // return this._set.has(value);
+
+        // Option 4: Nutzen von Map. Wenn value kein Schlüssel in der Map ist, kommt value nicht vor
+        return this._map.has(value);
     }
 
     /**
@@ -37,13 +69,17 @@ class RandomList {
      * @returns {Number} The number of occurences
      */
     count(value) {
-        let cnt = 0;
-        for (let i = 0; i < this._list.length; i++) {
-            if (this._list[i] === value) {
-                cnt++;
-            }
-        }
+        //     // Option 1: Durchsuchen der Liste
+        //     let cnt = 0;
+        //     for (let i = 0; i < this._list.length; i++) {
+        //         if (this._list[i] === value) {
+        //             cnt++;
+        //         } else if (this._list[i] > value) {
+        //             return cnt;
+        //         }
+        //     }
 
-        return cnt;
+        //     return cnt;
+        return this._map.get(value);
     }
 }
