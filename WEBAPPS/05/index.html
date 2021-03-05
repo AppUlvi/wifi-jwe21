@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+
+    <title>Document</title>
+
+    <style>
+        main {
+            display: grid;
+        }
+
+        div {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid black;
+            background: #ccc;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (min-width: 992px) {
+            main {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<!-- DOM TREE -->
+
+<body>
+    <button id="create-button">Create</button>
+
+    <main>
+
+    </main>
+    <div id="output">Nichts wurde geklickt.</div>
+
+    <script src="js/dog.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
