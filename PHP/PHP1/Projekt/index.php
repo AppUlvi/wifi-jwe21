@@ -3,9 +3,9 @@
 
 <?PHP
 
-echo "<pre>";
-print_r($_GET);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_GET);
+// echo "</pre>";
 
 if (empty($_GET["seite"])) {
     $seite = "home";
