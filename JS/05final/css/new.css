@@ -1,0 +1,170 @@
+/* COOKIES */
+
+#hinweis {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 2px;
+    background-color: rgb(226, 213, 25);
+    z-index: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#hinweisbox {
+    position: fixed;
+    bottom: -130px;
+    right: 0px;
+    width: calc(100vw - 100px);
+    padding: 20px 50px;
+    background-color: var(--b2);
+    border-top: 5px solid var(--c1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+}
+
+#hinweisbox p {
+    grid-column: 1 / span 2;
+    color: var(--c1);
+    font-weight: bold;
+    font-size: 120%;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+#zustimmen {
+    width: 150px;
+    justify-self: right;
+}
+
+#ablehnen {
+    width: 150px;
+    justify-self: left;
+}
+
+#loeschen {
+    border-radius: 30px;
+    font-weight: normal;
+    font-size: 10px;
+    padding: 2px 5px;
+}
+
+/* TRESOR */
+
+#tresor_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 10px 0;
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+#tresor_wrapper label {
+    margin: 20px 0;
+}
+
+#tresor {
+    margin: 20px 0 40px 0;
+    height: 200px;
+    width: 200px;
+    background-color: var(--b2);
+    border: 5px solid #2c2c2c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tresor_inside {
+    height: 145px;
+    width: 145px;
+    background-color: #727272;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#tresor_inside img {
+    position: absolute;
+    width: 90px;
+}
+
+#tresor_door {
+    position: relative;
+    left: 0px;
+    height: 135px;
+    width: 135px;
+    background-color: var(--b2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #2c2c2c;
+    border-radius: 5px;
+}
+
+#tresor_input {
+    width: 100px;
+    height: 40px;
+    font-size: 150%;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 5px solid #2c2c2c;
+    border-radius: 5px;
+    padding: 0;
+}
+
+#tresor_input:focus {
+    outline: none;
+    border-color: var(--c1);
+}
+
+/* AJAX */
+
+#ajax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--b2);
+    padding: 20px 0;
+}
+
+#ajax h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#ajax_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 241px;
+}
+
+#ajax img {
+    width: 150px;
+}
+
+#ajax_button {
+    float: none;
+    margin-bottom: 15px;
+}
+
+#ajax p {
+    margin: 35px;
+    color: white;
+}

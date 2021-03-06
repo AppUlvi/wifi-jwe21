@@ -1,0 +1,102 @@
+/* VARIABLES */
+
+:root {
+    --b1: rgb(240, 240, 240);
+    --b2: #444444;
+    --c1: #47AED4;
+}
+
+/* FONTS */
+
+/* montserrat-regular - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2')/* Super Modern Browsers */
+}
+
+/* montserrat-700 - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/montserrat-v15-latin-700.woff2') format('woff2'), url('../fonts/montserrat-v15-latin-700.woff2') format('woff2')
+}
+
+/* GENERAL */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Montserrat', 'Georgia', sans-serif;
+    background-color: var(--b1);
+}
+
+/* WRAPPING */
+
+.innerWrapper {
+    max-width: 1024px;
+    /* desktop */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    min-width: 0;
+    min-height: 0;
+    background-color: var(--c1);
+    border: 2px solid #7BDBFF;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--b1);
+    padding: 10px 25px;
+    float: right;
+}
+
+.btn:hover {
+    background-color: var(--b1);
+    color: var(--c1);
+}
+
+/* IMAGES */
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* Damit bilder sich responsive verhalten  */
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+/* 
+INFO:
+
+"@import 'header.css';": to import other css files (load order) - has to be placed on the first line. 
+*/
+
+/* 
+
+MEDIA QUERIES
+
+phone:       0 - 480  
+tablet:      480 - 768 
+desktop:     768 - 992   
+
+*/

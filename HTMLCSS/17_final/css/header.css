@@ -1,0 +1,46 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#main-teaser img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    max-height: 530px;
+    border-bottom: 5px solid var(--blue);
+}
+
+.headerInput {
+    margin-top: 30px;
+}
+
+header {
+    height: 640px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: white;
+    text-align: right;
+    font-size: 35px;
+    font-weight: bold;
+    height: auto;
+}
+
+header section p {
+    text-align: right;
+    color: var(--blue);
+    font-family: 'Georgia';
+}
+
+@media (min-width: 768px) {
+    .headerInput {
+        margin-right: 120px;
+    }
+}
