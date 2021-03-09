@@ -1,21 +1,22 @@
 class Animal {
     /**
      * Creates an animal with a name 'name'.
-     * @param {string} name 
+     * @param {string} name
      */
-  constructor(name) {
-    this.name = name;
-  }
-      talk() {
+    constructor(name) {
+        this.name = name;
+        this.sound = "";
+    }
+
+    talk() {
         return this.name + " makes a noise.";
     }
 }
 
-
-class Dog extends Animal{
+class Dog extends Animal {
     /**
      * Creates a dog with a name 'name'.
-     * @param {string} name 
+     * @param {string} name
      */
     constructor(name) {
         super(name);
@@ -26,16 +27,16 @@ class Dog extends Animal{
      * @returns {string} Sound
      */
     talk() {
-        super.talk();
-        new Audio('audio/dog.mp3').play();
+        // super.talk();
+        new Audio("audio/dog.mp3").play();
         return this.name + " is barking.";
     }
 }
 
-class Cow extends Animal{
+class Cow extends Animal {
     /**
      * Creates a cow with a name 'name'.
-     * @param {string} name 
+     * @param {string} name
      */
     constructor(name) {
         super(name);
@@ -46,16 +47,16 @@ class Cow extends Animal{
      * @returns {string} Sound
      */
     talk() {
-        super.talk();
-        new Audio('audio/cow.mp3').play();
+        // super.talk();
+        new Audio("audio/cow.mp3").play();
         return this.name + " is mooing.";
     }
 }
 
-class Horse extends Animal{
+class Horse extends Animal {
     /**
      * Creates a horse with a name 'name'.
-     * @param {string} name 
+     * @param {string} name
      */
     constructor(name) {
         super(name);
@@ -66,16 +67,16 @@ class Horse extends Animal{
      * @returns {string} Sound
      */
     talk() {
-        super.talk();
-        new Audio('audio/horse.mp3').play();
+        // super.talk();
+        new Audio("audio/horse.mp3").play();
         return this.name + " is neighing.";
     }
 }
 
-class Cat extends Animal{
+class Cat extends Animal {
     /**
      * Creates a cat with a name 'name'.
-     * @param {string} name 
+     * @param {string} name
      */
     constructor(name) {
         super(name);
@@ -86,8 +87,8 @@ class Cat extends Animal{
      * @returns {string} Sound
      */
     talk() {
-        super.talk();
-        new Audio('audio/cat.mp3').play();
+        // super.talk();
+        new Audio("audio/cat.mp3").play();
         return this.name + " is meowing.";
     }
 }
