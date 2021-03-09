@@ -1,0 +1,45 @@
+main {
+  display: grid;
+}
+
+div {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  background: #ccc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.dog {
+  background-image: url("../img/dog.jpg");
+  background-size: cover;
+}
+
+.cow {
+  background-image: url("../img/cow.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.horse {
+  background-image: url("../img/horse.jpg");
+  background-size: cover;
+}
+.cat {
+  background-image: url("../img/cat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
