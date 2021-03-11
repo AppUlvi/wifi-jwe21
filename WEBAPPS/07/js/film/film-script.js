@@ -1,9 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('film_id');
 
-console.log(window.location.search);
-console.log(params);
-console.log(id);
+// console.log(window.location.search);
+// console.log(params);
+// console.log(id);
 
 if (id !== undefined) {
     // fetch auf API:  https://ghibliapi.herokuapp.com/films/{id}
@@ -21,6 +21,11 @@ if (id !== undefined) {
 
             title.textContent = film.title;
             description.textContent = film.description;
+
+            // displays properties from film in console
+            for (const property in film) {
+                console.log(property + ': ' + film[property]);
+            }
         })
         .catch(function (error) {
             console.log(error.message);
