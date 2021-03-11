@@ -1,103 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tabellen</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabellen</title>
+        <link rel="stylesheet" href="css/general.css" />
+        <!-- media="" for print  -->
+    </head>
 
-    <link rel="stylesheet" href="css/general.css">
-    <!-- media="" for print  -->
-</head>
+    <body>
+        <table class="beautiful">
+            <thead>
+                <tr>
+                    <th class="t-left">Zeitraum</th>
+                    <th class="t-left">Preis</th>
+                    <th class="t-left">Zimmer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">31. August - 19. November</td>
+                    <td>€ 240 p. P. / Nacht</td>
+                    <td>Familien Suite</td>
+                </tr>
+                <tr>
+                    <!-- <td>1. November - 9. November</td> -->
+                    <td>€ 455 p. P. / Nacht</td>
+                    <td>Premium Suite</td>
+                </tr>
+                <tr class="aktion">
+                    <td>2. November - 14. November</td>
+                    <td>€ 125 p. P. / Nacht</td>
+                    <td>Normal Suite</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="t-center">
+                        <small
+                            >Hinweis zu dieser Tabelle in informativer
+                            Form</small
+                        >
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
 
-<body>
+        <table class="special-design">
+            <thead>
+                <tr>
+                    <th>Zeitraum</th>
+                    <th>Preis</th>
+                    <th>Zimmer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">31. August - 19. November</td>
+                    <td>€ 240 p. P. / Nacht</td>
+                    <td>Familien Suite</td>
+                </tr>
+                <tr>
+                    <!-- <td>1. November - 9. November</td> -->
+                    <td>€ 455 p. P. / Nacht</td>
+                    <td>Premium Suite</td>
+                </tr>
+                <tr>
+                    <td>2. November - 14. November</td>
+                    <td>€ 125 p. P. / Nacht</td>
+                    <td>Normal Suite</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <small
+                            >Hinweis zu dieser Tabelle in informativer
+                            Form</small
+                        >
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
 
-    <table class="beautiful">
-        <thead>
+        <table class="simple">
             <tr>
-                <th class="t-left">Zeitraum</th>
-                <th class="t-left">Preis</th>
-                <th class="t-left">Zimmer</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="2">31. August - 19. November</td>
-                <td>€ 240 p. P. / Nacht</td>
-                <td>Familien Suite</td>
+                <td id="schlimmster-tag">Montag</td>
+                <td>Dienstag</td>
+                <td>Mittwoch</td>
+                <td>Donnerstag</td>
+                <td>Freitag</td>
+                <td class="schoener-tag">Samstag</td>
+                <td>Sonntag</td>
             </tr>
             <tr>
-                <!-- <td>1. November - 9. November</td> -->
-                <td>€ 455 p. P. / Nacht</td>
-                <td>Premium Suite</td>
+                <td>frei</td>
+                <td>frei</td>
+                <td>frei</td>
+                <td>frei</td>
+                <td>frei</td>
+                <td>frei</td>
+                <td>frei</td>
             </tr>
-            <tr class="aktion">
-                <td>2. November - 14. November</td>
-                <td>€ 125 p. P. / Nacht</td>
-                <td>Normal Suite</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3" class="t-center"><small>Hinweis zu dieser Tabelle in informativer Form</small></td>
-            </tr>
-        </tfoot>
-    </table>
-
-
-    <table class="special-design">
-        <thead>
-            <tr>
-                <th>Zeitraum</th>
-                <th>Preis</th>
-                <th>Zimmer</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="2">31. August - 19. November</td>
-                <td>€ 240 p. P. / Nacht</td>
-                <td>Familien Suite</td>
-            </tr>
-            <tr>
-                <!-- <td>1. November - 9. November</td> -->
-                <td>€ 455 p. P. / Nacht</td>
-                <td>Premium Suite</td>
-            </tr>
-            <tr>
-                <td>2. November - 14. November</td>
-                <td>€ 125 p. P. / Nacht</td>
-                <td>Normal Suite</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3"><small>Hinweis zu dieser Tabelle in informativer Form</small></td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <table class="simple">
-        <tr>
-            <td id="schlimmster-tag">Montag</td>
-            <td>Dienstag</td>
-            <td>Mittwoch</td>
-            <td>Donnerstag</td>
-            <td>Freitag</td>
-            <td class="schoener-tag">Samstag</td>
-            <td>Sonntag</td>
-        </tr>
-        <tr>
-            <td>frei</td>
-            <td>frei</td>
-            <td>frei</td>
-            <td>frei</td>
-            <td>frei</td>
-            <td>frei</td>
-            <td>frei</td>
-        </tr>
-    </table>
-
-</body>
-
+        </table>
+    </body>
 </html>

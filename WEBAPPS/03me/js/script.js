@@ -10,15 +10,12 @@ function onGenerateClick() {
     let arrLength = parseFloat(document.querySelector('#array-length').value);
 
     if (arrLength > 0 && valStart <= valEnd) {
-
         let startTime = performance.now();
         randomList = generateRandomList(valStart, valEnd, arrLength);
-        console.log((performance.now() - startTime) + "ms");
+        console.log(performance.now() - startTime + 'ms');
 
         document.querySelector('#output').textContent = randomList.join(', ');
-    } else
-        document.querySelector('#output').textContent = "error";
-
+    } else document.querySelector('#output').textContent = 'error';
 }
 
 function generateRandomList(valStart, valEnd, arrLength) {
@@ -26,7 +23,8 @@ function generateRandomList(valStart, valEnd, arrLength) {
     for (let i = 0; i < arrLength; i++) {
         // https://www.w3schools.com/js/js_random.asp
         // This JavaScript function always returns a random number between min and max (both included):
-        list[i] = Math.floor(Math.random() * (valEnd - valStart + 1)) + valStart;
+        list[i] =
+            Math.floor(Math.random() * (valEnd - valStart + 1)) + valStart;
     }
     return list;
 }
@@ -38,23 +36,20 @@ function onSearchClick() {
     if (isInList(valSearch)) {
         let count = 0;
         for (let i = 0; i < randomList.length; i++)
-            if (valSearch === randomList[i])
-                count++;
+            if (valSearch === randomList[i]) count++;
 
         document.querySelector('#found-value').value = count;
-    } else
-        document.querySelector('#found-value').value = 'not found';
-
+    } else document.querySelector('#found-value').value = 'not found';
 }
 
 function isInList(valSearch) {
     for (let i = 0; i < randomList.length; i++)
-        if (valSearch === randomList[i])
-            return true;
+        if (valSearch === randomList[i]) return true;
 
     return false;
 }
 
-
-document.querySelector('#btn-generate').addEventListener('click', onGenerateClick);
+document
+    .querySelector('#btn-generate')
+    .addEventListener('click', onGenerateClick);
 document.querySelector('#btn-search').addEventListener('click', onSearchClick);

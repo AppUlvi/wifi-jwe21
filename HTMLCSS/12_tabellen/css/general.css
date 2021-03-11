@@ -49,7 +49,8 @@ table.beautiful td {
     background: lightgrey;
 }
 
-table.beautiful th, table.beautiful td {
+table.beautiful th,
+table.beautiful td {
     padding: 10px;
 }
 

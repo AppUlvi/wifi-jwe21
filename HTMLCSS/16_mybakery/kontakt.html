@@ -1,156 +1,231 @@
 <!DOCTYPE html>
 <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/mainKontakt.css" />
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/mainKontakt.css">
+        <title>BAKERY - Kontakt</title>
+    </head>
 
-    <title>BAKERY - Kontakt</title>
-</head>
-
-<body>
-    <!-- OPEN WRAPPER -->
-    <div class="wrapper">
-        <!-- OPEN HEADER -->
-        <header id="top">
-            <div class="innerWrapper">
-                <div id="logo">
-                    <a href="index.html" title="Hier gehts zur Startseite">
-                        <img src="img/Logo.png" alt="BAKERY - Salzburg">
-                    </a>
-                </div>
-
-                <nav id="mainMenu">
-                    <ul>
-                        <li><a href="#">Über uns</a></li>
-                        <li><a href="unserteam.html">Unser Team</a></li>
-                        <li><a href="gallerie.html">Gallerie</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!-- CLOSE HEADER -->
-
-        <!-- OPEN MAIN -->
-        <main>
-            <div class="innerWrapper">
-                <section id="formAndAddress">
-                    <h2>Nehmen Sie eine Bestellung auf</h2>
-                    <form>
-                        <fieldset>
-                            <label class="labelbox">Herr<input type="radio" name="info" value="Herr"></label>
-                            <label class="labelbox">Frau<input type="radio" name="info" value="Frau"></label>
-                            <label class="labelbox">Firma<input type="radio" name="info" value="Firma"></label>
-                        </fieldset>
-
-                        <fieldset>
-                            <label class="normallabel" for="Name">Name</label>
-                            <input class="inputfield" id="Name" type="text" name="name"
-                                placeholder="Bitte geben Sie Ihren Namen ein" required>
-
-                            <label class="normallabel" for="EMail">Emailadresse</label>
-                            <input class="inputfield" id="EMail" type="email" name="mail"
-                                placeholder="Bitte geben Sie Ihre Emailadresse ein" required>
-
-                            <label class="normallabel" for="Betreff">Betreff</label>
-                            <input class="inputfield" id="Betreff" type="text" name="betreff"
-                                placeholder="Was ist Ihr Anliegen" required>
-
-                            <label class="normallabel" for="Date">Wunsch-Lieferungsdatum</label>
-                            <input class="inputfield" type="date" id="Date" name="lieferdatum">
-
-                            <label class="normallabel" for="Anfrage">Nachricht</label>
-                            <textarea class="inputfield" id="Anfrage" name="anfrage"
-                                placeholder="Details zu Ihrer Bestellung" required></textarea>
-                        </fieldset>
-
-                        <div class="checkboxdiv">
-                            <input id="Checkbox" class="checkbox" type="checkbox" name="datenschutz" required>
-                            <label for="Checkbox" class="checkboxlabel">Ich stimme der Verarbeitung meiner Daten zum
-                                Zweck der
-                                Kontaktaufnahme zu und akzeptiere die <a href="#">Datenschutzbestimmungen.</a></label>
-                        </div>
-
-                        <!-- SUBMIT BUTTON -->
-                        <div id="submit">
-                            <input type="submit" class="submit btn btnHard" value="BESTELLEN">
-                        </div>
-
-                    </form>
-                    <!-- ADRESS -->
-                    <aside>
-                        <address>
-                            Konditorei Bakery <br>
-                            John Doe <br>
-                            Uferweg 10 <br>
-                            1001 Wien <br>
-                            <br>
-                            +43 12 23 45 7 <br>
-                            <a
-                                href="mailto:stammgast@mcdonalds.at?subject=Anfrage%20via%20Website">stammgast@mcdonalds.at</a>
-                        </address>
-                    </aside>
-                </section>
-                <!-- MAPS -->
-                <section>
-                    <h2>So einfach finden Sie zu uns</h2>
-                    <div class="mapOuter">
-                        <div class="gmapCanvas">
-                            <iframe id="gmapCanvas"
-                                src="https://maps.google.com/maps?q=Salzburg&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        </div>
+    <body>
+        <!-- OPEN WRAPPER -->
+        <div class="wrapper">
+            <!-- OPEN HEADER -->
+            <header id="top">
+                <div class="innerWrapper">
+                    <div id="logo">
+                        <a href="index.html" title="Hier gehts zur Startseite">
+                            <img src="img/Logo.png" alt="BAKERY - Salzburg" />
+                        </a>
                     </div>
-                </section>
+
+                    <nav id="mainMenu">
+                        <ul>
+                            <li><a href="#">Über uns</a></li>
+                            <li><a href="unserteam.html">Unser Team</a></li>
+                            <li><a href="gallerie.html">Gallerie</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- CLOSE HEADER -->
+
+            <!-- OPEN MAIN -->
+            <main>
+                <div class="innerWrapper">
+                    <section id="formAndAddress">
+                        <h2>Nehmen Sie eine Bestellung auf</h2>
+                        <form>
+                            <fieldset>
+                                <label class="labelbox"
+                                    >Herr<input
+                                        type="radio"
+                                        name="info"
+                                        value="Herr"
+                                /></label>
+                                <label class="labelbox"
+                                    >Frau<input
+                                        type="radio"
+                                        name="info"
+                                        value="Frau"
+                                /></label>
+                                <label class="labelbox"
+                                    >Firma<input
+                                        type="radio"
+                                        name="info"
+                                        value="Firma"
+                                /></label>
+                            </fieldset>
+
+                            <fieldset>
+                                <label class="normallabel" for="Name"
+                                    >Name</label
+                                >
+                                <input
+                                    class="inputfield"
+                                    id="Name"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Bitte geben Sie Ihren Namen ein"
+                                    required
+                                />
+
+                                <label class="normallabel" for="EMail"
+                                    >Emailadresse</label
+                                >
+                                <input
+                                    class="inputfield"
+                                    id="EMail"
+                                    type="email"
+                                    name="mail"
+                                    placeholder="Bitte geben Sie Ihre Emailadresse ein"
+                                    required
+                                />
+
+                                <label class="normallabel" for="Betreff"
+                                    >Betreff</label
+                                >
+                                <input
+                                    class="inputfield"
+                                    id="Betreff"
+                                    type="text"
+                                    name="betreff"
+                                    placeholder="Was ist Ihr Anliegen"
+                                    required
+                                />
+
+                                <label class="normallabel" for="Date"
+                                    >Wunsch-Lieferungsdatum</label
+                                >
+                                <input
+                                    class="inputfield"
+                                    type="date"
+                                    id="Date"
+                                    name="lieferdatum"
+                                />
+
+                                <label class="normallabel" for="Anfrage"
+                                    >Nachricht</label
+                                >
+                                <textarea
+                                    class="inputfield"
+                                    id="Anfrage"
+                                    name="anfrage"
+                                    placeholder="Details zu Ihrer Bestellung"
+                                    required
+                                ></textarea>
+                            </fieldset>
+
+                            <div class="checkboxdiv">
+                                <input
+                                    id="Checkbox"
+                                    class="checkbox"
+                                    type="checkbox"
+                                    name="datenschutz"
+                                    required
+                                />
+                                <label for="Checkbox" class="checkboxlabel"
+                                    >Ich stimme der Verarbeitung meiner Daten
+                                    zum Zweck der Kontaktaufnahme zu und
+                                    akzeptiere die
+                                    <a href="#"
+                                        >Datenschutzbestimmungen.</a
+                                    ></label
+                                >
+                            </div>
+
+                            <!-- SUBMIT BUTTON -->
+                            <div id="submit">
+                                <input
+                                    type="submit"
+                                    class="submit btn btnHard"
+                                    value="BESTELLEN"
+                                />
+                            </div>
+                        </form>
+                        <!-- ADRESS -->
+                        <aside>
+                            <address>
+                                Konditorei Bakery <br />
+                                John Doe <br />
+                                Uferweg 10 <br />
+                                1001 Wien <br />
+                                <br />
+                                +43 12 23 45 7 <br />
+                                <a
+                                    href="mailto:stammgast@mcdonalds.at?subject=Anfrage%20via%20Website"
+                                    >stammgast@mcdonalds.at</a
+                                >
+                            </address>
+                        </aside>
+                    </section>
+                    <!-- MAPS -->
+                    <section>
+                        <h2>So einfach finden Sie zu uns</h2>
+                        <div class="mapOuter">
+                            <div class="gmapCanvas">
+                                <iframe
+                                    id="gmapCanvas"
+                                    src="https://maps.google.com/maps?q=Salzburg&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!-- CLOSE MAIN -->
+
+            <!-- OPEN FOOTER -->
+            <footer id="mainFooter">
+                <div class="innerWrapper">
+                    <address>
+                        Konditorei Bakery <br />
+                        John Doe <br />
+                        Uferweg 10 <br />
+                        1001 Wien <br />
+                        <br />
+                        +43 12 23 45 7 <br />
+                        <a
+                            href="mailto:stammgast@mcdonalds.at?subject=Anfrage%20via%20Website"
+                            >stammgast@mcdonalds.at</a
+                        >
+                    </address>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Über Uns</a></li>
+                            <li><a href="#">Unser Team</a></li>
+                            <li><a href="#">Galerie</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">Datenschutz &amp; Cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+            <!-- CLOSE FOOTER -->
+
+            <!-- OPEN END -->
+            <div id="end">
+                <div class="innerWrapper">
+                    <p>
+                        &copy; 2020 by BAKERY Coder &bull; Alle Rechte
+                        vorbehalten.
+                    </p>
+                </div>
             </div>
-
-        </main>
-        <!-- CLOSE MAIN -->
-
-        <!-- OPEN FOOTER -->
-        <footer id="mainFooter">
-            <div class="innerWrapper">
-                <address>
-                    Konditorei Bakery <br>
-                    John Doe <br>
-                    Uferweg 10 <br>
-                    1001 Wien <br>
-                    <br>
-                    +43 12 23 45 7 <br>
-                    <a href="mailto:stammgast@mcdonalds.at?subject=Anfrage%20via%20Website">stammgast@mcdonalds.at</a>
-                </address>
-
-                <nav>
-                    <ul>
-                        <li><a href="#">Über Uns</a></li>
-                        <li><a href="#">Unser Team</a></li>
-                        <li><a href="#">Galerie</a></li>
-                        <li><a href="#">Kontakt</a></li>
-                        <li><a href="#">Impressum</a></li>
-                        <li><a href="#">Datenschutz &amp; Cookies</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-        <!-- CLOSE FOOTER -->
-
-        <!-- OPEN END -->
-        <div id="end">
-            <div class="innerWrapper">
-                <p>&copy; 2020 by BAKERY Coder &bull; Alle Rechte vorbehalten.</p>
-            </div>
+            <!-- CLOSE END -->
         </div>
-        <!-- CLOSE END -->
-
-    </div>
-    <!-- CLOSE WRAPPER -->
-
-</body>
-
+        <!-- CLOSE WRAPPER -->
+    </body>
 </html>

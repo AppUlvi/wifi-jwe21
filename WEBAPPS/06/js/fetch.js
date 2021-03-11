@@ -1,4 +1,4 @@
-fetch("test.txt")
+fetch('test.txt')
     .then(function (response) {
         console.log(response);
 
@@ -26,7 +26,7 @@ fetch("test.txt")
 
 // Schreibweise mit .then() sind JavaScript Promises
 
-fetch("test.json")
+fetch('test.json')
     .then(function (response) {
         if (response.ok) {
             return response.json();
@@ -35,27 +35,27 @@ fetch("test.json")
     .then(function (body) {
         console.log(body);
 
-        document.querySelector("main").textContent = body.message;
+        document.querySelector('main').textContent = body.message;
     });
 
 // Keine Garantie ueber die Reihenfolge von der Antwort von .json oder .txt
 
 const user = {
-    name: "Neuer User",
+    name: 'Neuer User',
     age: 33,
-    hairColor: "red",
+    hairColor: 'red',
 };
 
-fetch("api/user", {
-    method: "POST",
+fetch('api/user', {
+    method: 'POST',
     headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
     },
     body: JSON.stringify(user),
 }).then(function (response) {
     if (response.ok) {
-        console.log("User erfolgreich erstellt");
+        console.log('User erfolgreich erstellt');
     } else {
-        console.log("Fehler");
+        console.log('Fehler');
     }
 });

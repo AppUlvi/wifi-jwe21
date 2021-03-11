@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+        <title>Zufallsliste</title>
 
-    <title>Zufallsliste</title>
+        <style>
+            h1,
+            h2 {
+                font-family: sans-serif;
+            }
 
-    <style>
-        h1,
-        h2 {
-            font-family: sans-serif;
-        }
+            body {
+                margin: 0 auto;
+                max-width: 840px;
+                padding: 0.5em;
+            }
 
-        body {
-            margin: 0 auto;
-            max-width: 840px;
-            padding: .5em;
-        }
+            section {
+                margin-bottom: 1em;
+                padding: 0.5em;
+                border: 1px solid #ccc;
+            }
 
-        section {
-            margin-bottom: 1em;
-            padding: .5em;
-            border: 1px solid #ccc;
-        }
+            section label {
+                display: block;
+                width: 30em;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
 
-        section label {
-            display: block;
-            width: 30em;
-            margin-bottom: 1em;
-        }
-    </style>
-</head>
+    <body>
+        <header>
+            <h1>Zufallsliste</h1>
+        </header>
 
-<body>
-    <header>
-        <h1>Zufallsliste</h1>
-    </header>
+        <main>
+            <section>
+                <h2>Erzeugung</h2>
+                <label
+                    >Minimum: <input type="number" id="min-value" value="1"
+                /></label>
+                <label
+                    >Maximum: <input type="number" id="max-value" value="1000"
+                /></label>
+                <label
+                    >Anzahl: <input type="number" id="length" value="100000000"
+                /></label>
+                <button id="generate">Erzeuge eine Liste</button>
+                <div id="generate-output"></div>
+            </section>
+            <section>
+                <h2>Suche</h2>
+                <label
+                    >Suchwert: <input type="number" id="search-value"
+                /></label>
+                <button id="search">Suche</button>
+                <div id="search-output"></div>
+            </section>
+        </main>
 
-    <main>
-        <section>
-            <h2>Erzeugung</h2>
-            <label>Minimum: <input type="number" id="min-value" value="1"></label>
-            <label>Maximum: <input type="number" id="max-value" value="1000"></label>
-            <label>Anzahl: <input type="number" id="length" value="100000000"></label>
-            <button id="generate">Erzeuge eine Liste</button>
-            <div id="generate-output"></div>
-        </section>
-        <section>
-            <h2>Suche</h2>
-            <label>Suchwert: <input type="number" id="search-value"></label>
-            <button id="search">Suche</button>
-            <div id="search-output"></div>
-        </section>
-    </main>
-
-    <script src="js/random-list.js"></script>
-    <script src="js/script.js"></script>
-</body>
-
+        <script src="js/random-list.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

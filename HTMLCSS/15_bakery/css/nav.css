@@ -10,8 +10,6 @@
     margin: 0;
 }
 
-
-
 @media (min-width: 992px) {
     #main-menu ul {
         height: 100%;
@@ -34,5 +32,4 @@
         color: var(--brown);
         text-decoration: underline;
     }
-
 }

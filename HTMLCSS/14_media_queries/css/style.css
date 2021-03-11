@@ -3,7 +3,8 @@ img {
     height: auto;
 }
 
-.tablet, .desktop {
+.tablet,
+.desktop {
     display: none;
 }
 

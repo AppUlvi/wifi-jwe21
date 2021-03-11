@@ -3,8 +3,7 @@
 // }
 
 function onMiddleClick(event) {
-    console.log("Das middle div wurde geklickt");
-
+    console.log('Das middle div wurde geklickt');
 
     // event.target: Das HTML Element, wo das Event entstanden ist
     const element = event.target;
@@ -14,7 +13,6 @@ function onMiddleClick(event) {
     } else {
         console.log('Das middle div selbst wurde angeklickt');
     }
-
 }
 
 // function onInnerClick(event) {
@@ -35,6 +33,7 @@ middleDiv.addEventListener('click', onMiddleClick);
 
 // Events steigen in der Struktur der Elemente auf der Seite auf
 document.body.addEventListener('click', function (event) {
-    console.log('Der Eventlistener am body Element hat ein click Event bemerkt.');
+    console.log(
+        'Der Eventlistener am body Element hat ein click Event bemerkt.'
+    );
 });
-

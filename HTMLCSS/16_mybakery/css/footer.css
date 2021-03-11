@@ -22,7 +22,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-#mainFooter address, #mainFooter nav {
+#mainFooter address,
+#mainFooter nav {
     padding: 30px 0;
 }
 

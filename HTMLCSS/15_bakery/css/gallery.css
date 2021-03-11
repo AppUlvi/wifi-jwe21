@@ -36,17 +36,17 @@
 
 .grid-gallery {
     display: grid;
-    grid-template-areas: 
-    'B1 B8' 
-    'B2 B9' 
-    'B2 B10' 
-    'B3 B11' 
-    'B4 B11' 
-    'B5 B12' 
-    'B5 B13' 
-    'B6 B13' 
-    'B7 B14' 
-    'B7 B15';
+    grid-template-areas:
+        'B1 B8'
+        'B2 B9'
+        'B2 B10'
+        'B3 B11'
+        'B4 B11'
+        'B5 B12'
+        'B5 B13'
+        'B6 B13'
+        'B7 B14'
+        'B7 B15';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10, 30vw);
     gap: 5px;
@@ -79,12 +79,12 @@
     }
 
     .grid-gallery {
-        grid-template-areas: 
-        'B1 B8 B5 B12' 
-        'B2 B9 B5 B13' 
-        'B2 B10 B6 B13' 
-        'B3 B11 B7 B14' 
-        'B4 B11 B7 B15';
+        grid-template-areas:
+            'B1 B8 B5 B12'
+            'B2 B9 B5 B13'
+            'B2 B10 B6 B13'
+            'B3 B11 B7 B14'
+            'B4 B11 B7 B15';
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(5, 15vw);
     }

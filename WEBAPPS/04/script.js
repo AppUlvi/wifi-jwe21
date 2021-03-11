@@ -24,12 +24,12 @@ button.onclick = doSomething3;
 
 // Ein EventListener bekommt vom Browser ein Event-Objekt übergeben
 // Wenn wir mit diesem Event-Objekt irgendetwas machen wollen, dann muss eine Übergabevariable angegeben werden. Möchte man mit dem Event Objekt nichts machen, kann man die Übergabevariable auch weglassen
-function doSomething(event) { //Es kann nur ein Parameter mitgegeben werden, wie hier Event. Event notwendig damit er überhaupt etwas ausführt
+function doSomething(event) {
+    //Es kann nur ein Parameter mitgegeben werden, wie hier Event. Event notwendig damit er überhaupt etwas ausführt
     let name = 'Roland';
     let age = 32;
     doSomethingForReal(event, name, age);
 }
-
 
 // Achtung, keine Klammern nach dem Funktionsnamen!
 // Sonst würde die Funktion gleich beim Angeben des EventListener ausgeführt
@@ -62,8 +62,7 @@ function myFunction(name, age) {
 
     if (age > 80) {
         weight = 70;
-    }
-    else {
+    } else {
         weight = 100;
         var shoeSize = 36;
     }
@@ -86,7 +85,6 @@ function A() {
     }
 
     // Fehler: console.log(B1) -> undefined
-
 }
 // A1, A2: Zeilen 70 bis 81
 
@@ -114,30 +112,30 @@ myObject.myProperty;
 
 /**
  * Eine Klasse zum Grüßen einer Person.
- * 
+ *
  * Klassen sind wie ein "Bauplan" für Objekte. Sie fassen Daten und Funktionen zusammen.
- * 
- * Klassen und Funktionen können mit Kommentaren wie diesem, beginnend mit /**, genauer 
+ *
+ * Klassen und Funktionen können mit Kommentaren wie diesem, beginnend mit /**, genauer
  * beschrieben werden. Die Entwicklungsumgebung VS Code verwendet diese Kommentare für
  * die Autovervollständigung. Mehr dazu in der Doku von [JSDoc](https://jsdoc.app/).
  */
 class MyGreeting {
     /**
      * Erzeugt ein Objekt der Klasse MyGreeting.
-     * 
+     *
      * Der Konstruktor (Englisch constructor) wird beim Erzeugen des Objekts mit 'new' aufgerufen.
      * let myGreeting = new MyGreeting('Alex');
      * Im Konstruktor und in den Methoden bezieht sich 'this' auf das erzeugte Objekt.
      * Das bedeutet auch, dass Objekte einer Klasse nur auf ihre eigenen Variablen zugreifen
      * können, nicht auf die der anderen.
-     * 
-     * @param {string} name 
+     *
+     * @param {string} name
      */
     constructor(name) {
         // Konvention: Variablen, auf die von aussen nicht zugegriffen werden soll, beginnen
         // mit einem '_'.
         this._name = name;
-        this._phrase = "Hello";
+        this._phrase = 'Hello';
     }
 
     /**
@@ -186,7 +184,6 @@ l.sort(); // -> [1, 100, 5, 6] weil JavaScript die Werte erst in Strings verwand
 l.sort(function compare(a, b) {
     return a - b;
 }); // -> [1, 5, 6, 100];
-
 
 // Die eingebauten Datenstrukturen Set und Map
 

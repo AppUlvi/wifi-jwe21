@@ -1,5 +1,5 @@
 :root {
-    --colorPrimary: #E74149;
+    --colorPrimary: #e74149;
     --fontPrimary: 'Segoe', Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -28,7 +28,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     font-family: var(--fontPrimary);
@@ -81,7 +82,7 @@ img {
     left: -30px;
     width: calc(100% + 30px + 30px);
     height: 585px;
-    background-image: url("../img/content/blog-banner.png");
+    background-image: url('../img/content/blog-banner.png');
     background-position: 62% center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -95,7 +96,7 @@ h1 {
     margin-top: 160px;
     margin-bottom: 75px;
     font-size: 36px;
-    color: #FFF;
+    color: #fff;
     line-height: 1.5em;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -103,7 +104,7 @@ h1 {
 .btn {
     background-color: var(--colorPrimary);
     border: none;
-    color: #FFF;
+    color: #fff;
     border-radius: 12px;
     padding: 20px 35px;
     font-size: 18px;
@@ -154,12 +155,12 @@ footer::before {
     position: absolute;
     z-index: -1;
     left: -30px;
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     width: calc(100% + 30px + 30px);
     height: calc(100% + 30px);
 }
 
-#footerNav>ul {
+#footerNav > ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -171,7 +172,7 @@ footer::before {
     display: none;
 }
 
-#footerNav>ul>li {
+#footerNav > ul > li {
     flex-basis: 50%;
     padding-left: 40px;
     background-image: url(../img/list-arrow.svg);

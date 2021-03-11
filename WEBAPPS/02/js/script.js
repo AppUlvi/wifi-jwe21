@@ -1,5 +1,5 @@
-let queue = new Queue("Alpha", ' - ');
-let stack = new Stack("Gamma");
+let queue = new Queue('Alpha', ' - ');
+let stack = new Stack('Gamma');
 
 function onEnqueueButtonClick() {
     const elem = document.querySelector('#enqueue-value').value;
@@ -56,7 +56,15 @@ function showDataStructure(id, data_structure) {
     div.querySelector('.output').textContent = data_structure.toString();
 }
 
-document.querySelector('#enqueue-button').addEventListener('click', onEnqueueButtonClick);
-document.querySelector('#dequeue-button').addEventListener('click', onDequeueButtonClick);
-document.querySelector('#push-button').addEventListener('click', onPushButtonClick);
-document.querySelector('#pop-button').addEventListener('click', onPopButtonClick);
+document
+    .querySelector('#enqueue-button')
+    .addEventListener('click', onEnqueueButtonClick);
+document
+    .querySelector('#dequeue-button')
+    .addEventListener('click', onDequeueButtonClick);
+document
+    .querySelector('#push-button')
+    .addEventListener('click', onPushButtonClick);
+document
+    .querySelector('#pop-button')
+    .addEventListener('click', onPopButtonClick);

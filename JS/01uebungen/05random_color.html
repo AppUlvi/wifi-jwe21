@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
+        <title>Zufällige Farbe</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
-    <title>Zufällige Farbe</title>
-</head>
+    <body>
+        <div
+            id="farbe"
+            style="width: 300px; height: 300px; border: 3px solid grey"
+        ></div>
 
-<body>
+        <button class="random">Gib mir eine zufällige Farbe</button>
 
-    <div id="farbe" style="width: 300px; height: 300px; border: 3px solid grey;"></div>
+        <!-- jquery core script einfügen -->
+        <script src="js/.vendor/jquery-3.5.1.js"></script>
 
-    <button class="random">Gib mir eine zufällige Farbe</button>
-
-
-    <!-- jquery core script einfügen -->
-    <script src="js/.vendor/jquery-3.5.1.js"></script>
-
-    <!-- mein js code -->
-    <script src="js/07randomColor.js"></script>
-
-
-</body>
-
+        <!-- mein js code -->
+        <script src="js/07randomColor.js"></script>
+    </body>
 </html>

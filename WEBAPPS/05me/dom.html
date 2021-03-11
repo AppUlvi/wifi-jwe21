@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+        <title>Document</title>
 
-    <title>Document</title>
-
-    <style>
-        body {
-            background: #fff;
-        }
-
-        main {
-            display: grid;
-        }
-
-        div {
-            margin: 1em;
-            padding: 1em;
-            border: 1px solid black;
-            background: #ccc;
-        }
-
-        @media (min-width: 768px) {
+        <style>
             body {
-                background: salmon;
+                background: #fff;
             }
 
             main {
-                grid-template-columns: 1fr 1fr;
+                display: grid;
             }
 
-        }
-
-        @media (min-width: 992px) {
-            body {
-                background: seagreen;
+            div {
+                margin: 1em;
+                padding: 1em;
+                border: 1px solid black;
+                background: #ccc;
             }
 
-            main {
-                grid-template-columns: repeat(5, 1fr);
+            @media (min-width: 768px) {
+                body {
+                    background: salmon;
+                }
+
+                main {
+                    grid-template-columns: 1fr 1fr;
+                }
             }
-        }
-    </style>
 
-</head>
+            @media (min-width: 992px) {
+                body {
+                    background: seagreen;
+                }
 
-<!-- DOM TREE -->
+                main {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        </style>
+    </head>
 
-<body>
-    <button id="create-button">Create</button>
+    <!-- DOM TREE -->
 
-    <main>
+    <body>
+        <button id="create-button">Create</button>
 
-    </main>
-    <div id="output">Nichts wurde geklickt.</div>
+        <main></main>
+        <div id="output">Nichts wurde geklickt.</div>
 
-    <script src="js/dom.js"></script>
-
-</body>
-
+        <script src="js/dom.js"></script>
+    </body>
 </html>

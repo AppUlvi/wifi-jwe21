@@ -1,5 +1,5 @@
-const main = document.querySelector("main");
-const output = document.querySelector("#output");
+const main = document.querySelector('main');
+const output = document.querySelector('#output');
 
 let nextId = 0;
 let counters = [];
@@ -19,7 +19,6 @@ function onCreateButtonClick(event) {
     // myDiv.dataset.name = 'ulvi';
     myDiv.dataset.counterId = nextId;
 
-
     // myDiv.id = `mydiv-${nextId}`;
     // myDiv.textContent = `div Nr. ${nextId}`;
     nextId++;
@@ -29,7 +28,6 @@ function onCreateButtonClick(event) {
 
     // Geht auch:
     // myDiv.parentElement = main;
-
 }
 
 function onMainClick(event) {
@@ -42,9 +40,7 @@ function onMainClick(event) {
         event.target.textContent = counters[counterId];
     }
     // }
-
 }
-
 
 const createButton = document.querySelector('#create-button');
 createButton.addEventListener('click', onCreateButtonClick);

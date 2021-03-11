@@ -20,8 +20,8 @@
     outline: none;
     border: 1px solid var(--brown);
     width: 100%;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: .8rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8rem;
 }
 
 .contact-form .radios {

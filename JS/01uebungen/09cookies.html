@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+        <title>Cookies in Javascript</title>
+    </head>
 
-    <title>Cookies in Javascript</title>
+    <body>
+        <div>
+            <input type="text" id="cookie_value" />
+            <button id="set_cookie">set cookie</button>
+        </div>
 
-</head>
+        <hr />
 
-<body>
+        <div id="output">
+            <!-- Cookie Value durch Javascript hier eingesetzt -->
+        </div>
 
-    <div>
-        <input type="text" id="cookie_value">
-        <button id="set_cookie">set cookie</button>
-    </div>
+        <button id="read_cookie">read cookie</button>
 
-    <hr>
+        <!-- jquery core script einfügen -->
+        <script src="js/.vendor/jquery-3.5.1.js"></script>
 
-    <div id="output">
-        <!-- Cookie Value durch Javascript hier eingesetzt -->
-    </div>
+        <!-- cookie script: https://github.com/js-cookie/js-cookie -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
-    <button id="read_cookie">read cookie</button>
-
-    <!-- jquery core script einfügen -->
-    <script src="js/.vendor/jquery-3.5.1.js"></script>
-
-    <!-- cookie script: https://github.com/js-cookie/js-cookie -->
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-
-    <!-- mein js code -->
-    <script src="js/12cookie.js"></script>
-
-</body>
-
+        <!-- mein js code -->
+        <script src="js/12cookie.js"></script>
+    </body>
 </html>

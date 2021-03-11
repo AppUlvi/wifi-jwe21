@@ -1,5 +1,5 @@
 :root {
-    --brown: #D0B085;
+    --brown: #d0b085;
     --grey: #707070;
 }
 
@@ -9,7 +9,9 @@
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('../fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'), url('../fonts/josefin-sans-v12-latin-regular.woff') format('woff');
+    src: local(''),
+        url('../fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'),
+        url('../fonts/josefin-sans-v12-latin-regular.woff') format('woff');
 }
 
 /* josefin-sans-bold - latin */
@@ -18,10 +20,13 @@
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 700;
-    src: local(''), url('../fonts/josefin-sans-v12-latin-700.woff2') format('woff2'), url('../fonts/josefin-sans-v12-latin-700.woff') format('woff');
+    src: local(''),
+        url('../fonts/josefin-sans-v12-latin-700.woff2') format('woff2'),
+        url('../fonts/josefin-sans-v12-latin-700.woff') format('woff');
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;

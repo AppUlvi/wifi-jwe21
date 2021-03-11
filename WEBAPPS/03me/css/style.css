@@ -16,10 +16,10 @@ label {
     flex-direction: column;
 }
 
-.input{
+.input {
     width: 100px;
 }
 
-#output{
+#output {
     width: 500px;
 }

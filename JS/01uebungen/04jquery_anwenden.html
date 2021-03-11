@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
+        <title>JQuery anwenden</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
-    <title>JQuery anwenden</title>
+        <style>
+            .mouseout {
+                background-color: yellow;
+                color: green;
+            }
 
-    <style>
-        .mouseout {
-            background-color: yellow;
-            color: green;
-        }
+            .mouseover {
+                background-color: green;
+                color: yellow;
+            }
+        </style>
+    </head>
 
-        .mouseover {
-            background-color: green;
-            color: yellow;
-        }
-    </style>
+    <body>
+        Eingabe: <input type="text" id="input" value="" /> <br />
+        <button id="calc">Ausrechnen</button> <br />
+        Ergebnis: <input type="text" id="result" readonly />
 
+        <div
+            id="events"
+            style="
+                width: 300px;
+                height: 300px;
+                background-color: green;
+                color: yellow;
+            "
+        ></div>
 
-</head>
+        <div
+            id="events2"
+            class="mouseout"
+            style="width: 200px; height: 200px"
+        ></div>
 
-<body>
+        <!-- jquery core script einfügen -->
+        <script src="js/.vendor/jquery-3.5.1.js"></script>
 
-    Eingabe: <input type="text" id="input" value=""> <br>
-    <button id="calc">Ausrechnen</button> <br>
-    Ergebnis: <input type="text" id="result" readonly>
-
-    <div id="events" style=" width: 300px; height: 300px; background-color: green; color: yellow;"></div>
-
-    <div id="events2" class="mouseout" style=" width: 200px; height: 200px;"></div>
-
-    <!-- jquery core script einfügen -->
-    <script src="js/.vendor/jquery-3.5.1.js"></script>
-
-    <!-- mein js code -->
-    <script src="js/06jquery_anwenden.js"></script>
-
-
-</body>
-
+        <!-- mein js code -->
+        <script src="js/06jquery_anwenden.js"></script>
+    </body>
 </html>

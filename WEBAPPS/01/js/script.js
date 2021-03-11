@@ -3,43 +3,30 @@
 // returns defaultValue if input isNaN
 // returns parseFloat if input is a number
 function parseInput(input, defaultValue) {
-
-    if (input.trim().toUpperCase() === 'PI')
-        return Math.PI;
-    else if (input.trim().toUpperCase() === 'E')
-        return Math.E;
-    else
-        if (isNaN(parseFloat(input)))
-            return defaultValue;
-        else
-            return parseFloat(input);
-
+    if (input.trim().toUpperCase() === 'PI') return Math.PI;
+    else if (input.trim().toUpperCase() === 'E') return Math.E;
+    else if (isNaN(parseFloat(input))) return defaultValue;
+    else return parseFloat(input);
 }
 
 // calculates number 1 & number 2 with the selected operator and writes it into #result query
 function calculate() {
-
     const num1 = parseInput(document.querySelector('#num1').value);
     const num2 = parseInput(document.querySelector('#num2').value);
     const operator = document.querySelector('#operator').value;
 
     let result;
 
-    if (operator === '+')
-        result = num1 + num2;
-    else if (operator === '-')
-        result = num1 - num2;
-    else if (operator === '*')
-        result = num1 * num2;
-    else if (operator === '/')
-        result = num1 / num2;
+    if (operator === '+') result = num1 + num2;
+    else if (operator === '-') result = num1 - num2;
+    else if (operator === '*') result = num1 * num2;
+    else if (operator === '/') result = num1 / num2;
 
     document.querySelector('#result').value = result;
 }
 
-// returns numbers array and overwrites with defaultValue if number isNaN 
+// returns numbers array and overwrites with defaultValue if number isNaN
 function getNumbers(defaultValue) {
-
     const numberElems = document.querySelectorAll('.number');
     let numbers = [];
 
@@ -51,7 +38,6 @@ function getNumbers(defaultValue) {
 
 // calculates sum of numbers array
 function sum() {
-
     const numbers = getNumbers(0);
     let result = numbers[0];
 
@@ -64,12 +50,10 @@ function sum() {
 
 // calculates product of numbers array
 function product() {
-
     const numbers = getNumbers(1);
     let result = 1;
 
-    for (let number of numbers)
-        result *= number;
+    for (let number of numbers) result *= number;
 
     document.querySelector('#result').value = result;
 }

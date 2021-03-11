@@ -1,4 +1,5 @@
 // In einem Terminal
+// nodejs installieren: https://nodejs.org/ (Wichtig: PATH)
 // 1. npm installieren
 // 2. node server.js
 // https://expressjs.com/

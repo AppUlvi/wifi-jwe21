@@ -1,9 +1,8 @@
 /**
- * A class for data structures 
+ * A class for data structures
  */
 
 class List {
-
     constructor(name, seperator) {
         this._name = name;
         if (seperator === undefined) {
@@ -19,7 +18,7 @@ class List {
      */
 
     toString() {
-        return this._name + ": " + this._list.join(this._seperator);
+        return this._name + ': ' + this._list.join(this._seperator);
     }
 }
 
@@ -45,7 +44,7 @@ class Queue extends List {
 class Stack extends List {
     // "_": beschreibt interne Variable
     constructor(name, seperator) {
-        super(name + '-Stack', seperator)
+        super(name + '-Stack', seperator);
     }
 
     push(element) {

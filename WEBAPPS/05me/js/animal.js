@@ -5,11 +5,11 @@ class Animal {
      */
     constructor(name) {
         this.name = name;
-        this.sound = "";
+        this.sound = '';
     }
 
     talk() {
-        return this.name + " makes a noise.";
+        return this.name + ' makes a noise.';
     }
 }
 
@@ -28,8 +28,8 @@ class Dog extends Animal {
      */
     talk() {
         // super.talk();
-        new Audio("audio/dog.mp3").play();
-        return this.name + " is barking.";
+        new Audio('audio/dog.mp3').play();
+        return this.name + ' is barking.';
     }
 }
 
@@ -48,8 +48,8 @@ class Cow extends Animal {
      */
     talk() {
         // super.talk();
-        new Audio("audio/cow.mp3").play();
-        return this.name + " is mooing.";
+        new Audio('audio/cow.mp3').play();
+        return this.name + ' is mooing.';
     }
 }
 
@@ -68,8 +68,8 @@ class Horse extends Animal {
      */
     talk() {
         // super.talk();
-        new Audio("audio/horse.mp3").play();
-        return this.name + " is neighing.";
+        new Audio('audio/horse.mp3').play();
+        return this.name + ' is neighing.';
     }
 }
 
@@ -88,7 +88,7 @@ class Cat extends Animal {
      */
     talk() {
         // super.talk();
-        new Audio("audio/cat.mp3").play();
-        return this.name + " is meowing.";
+        new Audio('audio/cat.mp3').play();
+        return this.name + ' is meowing.';
     }
 }

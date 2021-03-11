@@ -8,7 +8,7 @@ function randomInt(min, max) {
 class RandomList {
     /**
      * Create a new list of random integers
-     *  
+     *
      * @param {Number} min Minimum integer
      * @param {Number} max Maximum integer
      * @param {Number} length Number of elements in the list
@@ -65,7 +65,7 @@ class RandomList {
 
     /**
      * Find the number of occurences of a given value in the list.
-     * @param {Number} value 
+     * @param {Number} value
      * @returns {Number} The number of occurences
      */
     count(value) {

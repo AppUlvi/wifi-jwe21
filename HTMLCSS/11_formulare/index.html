@@ -1,59 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <title>Formular</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>Formular</title>
-</head>
+    <body>
+        <form action="index.html" method="get" autocomplete="off">
+            <fieldset>
+                <legend>Persönlichen Daten:</legend>
+                <p>
+                    <input
+                        type="radio"
+                        name="gender"
+                        id="gender_female"
+                        value="female"
+                    />
+                    <label for="gender_female">Weiblich</label>
+                    <br />
+                    <input
+                        type="radio"
+                        name="gender"
+                        id="gender_male"
+                        value="male"
+                    />
+                    <label for="gender_male">Männlich</label>
+                    <br />
+                    <input
+                        type="radio"
+                        name="gender"
+                        id="gender_diverse"
+                        value="diverse"
+                    />
+                    <label for="gender_diverse">Divers</label>
+                </p>
+                <p>
+                    <label for="firstname">Vorname</label>
+                    <input type="text" name="firstname" id="firstname" />
+                    <br />
+                    <label for="lastname">Nachname</label>
+                    <input type="text" name="lastname" id="lastname" />
+                </p>
+            </fieldset>
 
-<body>
+            <fieldset>
+                <legend>Zusatzfelder:</legend>
+                <p>
+                    <label for="email">Ihre E-Mail-Adresse: </label>
+                    <input type="email" name="email" id="email" />
+                    <br />
+                    <label for="birthday">Ihr Geburtstag: </label>
+                    <input
+                        type="date"
+                        name="birthday"
+                        id="birthday"
+                        min="1900-10-28"
+                        max="2020-10-31"
+                    />
+                    <br />
+                    <label for="age">Ihr Alter (Jahre): </label>
+                    <input
+                        type="number"
+                        name="age"
+                        id="age"
+                        value="25"
+                        min="18"
+                        max="110"
+                        step="0.1"
+                        readonly
+                    />
+                    <br />
+                    <label for="reservationtime">Reeservation: </label>
+                    <input
+                        type="time"
+                        name="reservationtime"
+                        id="reservationtime"
+                    />
+                    <br />
+                    <label for="favouriteColor">Ihre Lieblingsfarbe: </label>
+                    <input
+                        type="color"
+                        name="favouriteColor"
+                        id="favouriteColor"
+                    />
 
-
-    <form action="index.html" method="get" autocomplete="off">
-
-        <fieldset>
-            <legend>Persönlichen Daten: </legend>
-            <p>
-                <input type="radio" name="gender" id="gender_female" value="female">
-                <label for="gender_female">Weiblich</label>
-                <br>
-                <input type="radio" name="gender" id="gender_male" value="male">
-                <label for="gender_male">Männlich</label>
-                <br>
-                <input type="radio" name="gender" id="gender_diverse" value="diverse">
-                <label for="gender_diverse">Divers</label>
-            </p>
-            <p>
-                <label for="firstname">Vorname</label>
-                <input type="text" name="firstname" id="firstname">
-                <br>
-                <label for="lastname">Nachname</label>
-                <input type="text" name="lastname" id="lastname">
-            </p>
-        </fieldset>
-
-        <fieldset>
-            <legend>Zusatzfelder:</legend>
-            <p>
-                <label for="email">Ihre E-Mail-Adresse: </label>
-                <input type="email" name="email" id="email">
-                <br>
-                <label for="birthday">Ihr Geburtstag: </label>
-                <input type="date" name="birthday" id="birthday" min="1900-10-28" max="2020-10-31">
-                <br>
-                <label for="age">Ihr Alter (Jahre): </label>
-                <input type="number" name="age" id="age" value="25" min="18" max="110" step="0.1" readonly>
-                <br>
-                <label for="reservationtime">Reeservation: </label>
-                <input type="time" name="reservationtime" id="reservationtime">
-                <br>
-                <label for="favouriteColor">Ihre Lieblingsfarbe: </label>
-                <input type="color" name="favouriteColor" id="favouriteColor">
-
-                <!-- <br>
+                    <!-- <br>
                 <label for="range">Bereich: </label>
                 <input type="range" name="range_color" list="listcolors" step="1" min="0" max="2">
                 <input list="colors" id="listcolor" name="listcolor" />
@@ -62,83 +100,129 @@
                     <option value="1" label="blau">Blau</option>
                     <option value="2" label="gelb">Gelb</option>
                 </datalist> -->
-                <br>
-                <input type="checkbox" name="policy" id="policy" value="OK, ich bin einverstanden." required>
-                <label for="policy">Ich erkläre mich hiermit mit den
-                    <a href="policy.html" target="_blank">Bestimmungen</a>
-                    einverstanden.</label>
-                <br>
-                <label for="tel">Ihre Nummer: </label>
-                <input type="tel" name="tel" id="tel">
-                <br>
-                <label for="yourwebsite">Ihre Website URL: </label>
-                <input type="url" name="yourwebsite" id="yourwebsite">
-                <br>
-                <label for="profile">Bild hochladen: </label>
-                <input type="file" name="profile" id="profile" accept=".pdf,image/*">
-                <br>
-                <input type="hidden" name="key" value="lansdlknsalnalsnlanlnlas">
-                <!-- verstecktes formular -->
-                <label for="searchfield">Suchleiste: </label>
-                <input type="search" name="searchfield" id="searchfield" list="search_words">
-                <datalist id="search_words">
-                    <option value="ananas">Ananas</option>
-                    <option value="banane">Banane</option>
-                    <option value="apfel">Apfel</option>
-                </datalist>
-            </p>
-            <p>
-                <label for="message">Ihre Nachricht: </label> <br>
-                <textarea name="message" id="message" cols="30" rows="10"
-                    placeholder="Schreiben Sie hier Ihre Nachricht..."></textarea>
-            </p>
-            <p>
-                <label for="dayOfTheWeek">Wählen Sie Ihre(n) Lieblingstag(e) der Woche: </label>
-                <select name="dayOfTheWeek" id="dayOfTheWeek">
-                    <optgroup label="Werktage">
-                        <option value="Monday">Montag</option>
-                        <option value="Tuesday">Dienstag</option>
-                        <option value="Wednesday">Mitttwoch</option>
-                        <option value="Thursday">Donnerstag</option>
-                        <option value="Friday">Freitag</option>
-                    </optgroup>
-                    <optgroup label="Wochenende">
-                        <option value="Saturday" disabled>Samstag</option>
-                        <option value="Sunday" disabled>Sonntag</option>
-                    </optgroup>
-                </select>
-            </p>
-        </fieldset>
+                    <br />
+                    <input
+                        type="checkbox"
+                        name="policy"
+                        id="policy"
+                        value="OK, ich bin einverstanden."
+                        required
+                    />
+                    <label for="policy"
+                        >Ich erkläre mich hiermit mit den
+                        <a href="policy.html" target="_blank">Bestimmungen</a>
+                        einverstanden.</label
+                    >
+                    <br />
+                    <label for="tel">Ihre Nummer: </label>
+                    <input type="tel" name="tel" id="tel" />
+                    <br />
+                    <label for="yourwebsite">Ihre Website URL: </label>
+                    <input type="url" name="yourwebsite" id="yourwebsite" />
+                    <br />
+                    <label for="profile">Bild hochladen: </label>
+                    <input
+                        type="file"
+                        name="profile"
+                        id="profile"
+                        accept=".pdf,image/*"
+                    />
+                    <br />
+                    <input
+                        type="hidden"
+                        name="key"
+                        value="lansdlknsalnalsnlanlnlas"
+                    />
+                    <!-- verstecktes formular -->
+                    <label for="searchfield">Suchleiste: </label>
+                    <input
+                        type="search"
+                        name="searchfield"
+                        id="searchfield"
+                        list="search_words"
+                    />
+                    <datalist id="search_words">
+                        <option value="ananas">Ananas</option>
+                        <option value="banane">Banane</option>
+                        <option value="apfel">Apfel</option>
+                    </datalist>
+                </p>
+                <p>
+                    <label for="message">Ihre Nachricht: </label> <br />
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Schreiben Sie hier Ihre Nachricht..."
+                    ></textarea>
+                </p>
+                <p>
+                    <label for="dayOfTheWeek"
+                        >Wählen Sie Ihre(n) Lieblingstag(e) der Woche:
+                    </label>
+                    <select name="dayOfTheWeek" id="dayOfTheWeek">
+                        <optgroup label="Werktage">
+                            <option value="Monday">Montag</option>
+                            <option value="Tuesday">Dienstag</option>
+                            <option value="Wednesday">Mitttwoch</option>
+                            <option value="Thursday">Donnerstag</option>
+                            <option value="Friday">Freitag</option>
+                        </optgroup>
+                        <optgroup label="Wochenende">
+                            <option value="Saturday" disabled>Samstag</option>
+                            <option value="Sunday" disabled>Sonntag</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
 
-        <fieldset>
-            <legend>User: </legend>
-            <p>
-                <label for="username">Username: </label>
-                <input type="text" name="user" id="username" placeholder="Username" minlength="3" maxlength="10"
-                    required>
-                <br>
-                <label for="password">Passwort: </label>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </p>
-        </fieldset>
+            <fieldset>
+                <legend>User:</legend>
+                <p>
+                    <label for="username">Username: </label>
+                    <input
+                        type="text"
+                        name="user"
+                        id="username"
+                        placeholder="Username"
+                        minlength="3"
+                        maxlength="10"
+                        required
+                    />
+                    <br />
+                    <label for="password">Passwort: </label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                    />
+                </p>
+            </fieldset>
 
-        <button type="submit" class="btn btn-primary">Formular abschicken</button>
-        <button type="reset" class="btn btn-primary" value="Formular Inhalte löschen">Reset</button>
-    </form>
+            <button type="submit" class="btn btn-primary">
+                Formular abschicken
+            </button>
+            <button
+                type="reset"
+                class="btn btn-primary"
+                value="Formular Inhalte löschen"
+            >
+                Reset
+            </button>
+        </form>
 
-
-
-    <!-- jQuery and JS bundle w/ Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-
-
-
-
-</body>
-
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

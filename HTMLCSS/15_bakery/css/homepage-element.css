@@ -26,7 +26,6 @@
     text-align: center;
 }
 
-
 /* hier geschehen alle Formatierung ab einer Viewport-Breite von 480px */
 @media (min-width: 480px) {
     .homepage-element .four-columns {
@@ -44,19 +43,13 @@
     }
 }
 
-
 @media (min-width: 480px) and (max-width: 767px) {
-
     .homepage-element .four-columns .item:nth-child(2n) {
         margin-left: 1em;
     }
-
 }
 
-
-
 @media (min-width: 768px) {
-
     .homepage-element .four-columns .item {
         flex-basis: calc(25% - 15px);
         /*  [] 20px [] 20px [] 20px []      */
@@ -71,12 +64,9 @@
     .homepage-element .item img {
         height: 20vw;
     }
-
 }
 
-
 @media (min-width: 992px) {
-
     .homepage-element .item img {
         height: 230px;
     }

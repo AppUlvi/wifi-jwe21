@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- removes favicon error -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- removes favicon error -->
+        <title>Queue and Stack</title>
 
-    <title>Queue and Stack</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <header>
+            <h1>Datenstrukturen in JavaScript</h1>
+        </header>
 
-<body>
+        <main>
+            <div id="queue" class="data-structure">
+                <h2>Queue</h2>
 
-    <header>
-        <h1>Datenstrukturen in JavaScript</h1>
-    </header>
-
-    <main>
-        <div id="queue" class="data-structure">
-            <h2>Queue</h2>
-
-            <div class="user-input">
-                <div class="operation enqueue">
-                    <label>Wert:
-                        <input type="text" id="enqueue-value">
-                    </label>
-                    <button id="enqueue-button">Enqueue</button>
+                <div class="user-input">
+                    <div class="operation enqueue">
+                        <label
+                            >Wert:
+                            <input type="text" id="enqueue-value" />
+                        </label>
+                        <button id="enqueue-button">Enqueue</button>
+                    </div>
+                    <div class="operation dequeue">
+                        <button id="dequeue-button">Dequeue</button>
+                        <div id="dequeue-value">Wert:</div>
+                    </div>
                 </div>
-                <div class="operation dequeue">
-                    <button id="dequeue-button">Dequeue</button>
-                    <div id="dequeue-value">Wert:</div>
-                </div>
+
+                <div class="output">Queue:</div>
             </div>
 
-            <div class="output">
-                Queue:
-            </div>
-        </div>
+            <div id="stack" class="data-structure">
+                <h2>Stack</h2>
 
-        <div id="stack" class="data-structure">
-            <h2>Stack</h2>
-
-            <div class="user-input">
-                <div class="operation push">
-                    <label>Wert:
-                        <input type="text" id="push-value">
-                    </label>
-                    <button id="push-button">Push</button>
+                <div class="user-input">
+                    <div class="operation push">
+                        <label
+                            >Wert:
+                            <input type="text" id="push-value" />
+                        </label>
+                        <button id="push-button">Push</button>
+                    </div>
+                    <div class="operation pop">
+                        <button id="pop-button">Pop</button>
+                        <div id="pop-value">Wert:</div>
+                    </div>
                 </div>
-                <div class="operation pop">
-                    <button id="pop-button">Pop</button>
-                    <div id="pop-value">Wert:</div>
-                </div>
+
+                <div class="output">Stack:</div>
             </div>
+        </main>
 
-            <div class="output">
-                Stack:
-            </div>
-        </div>
-    </main>
-
-    <script src="js/data_structure.js"></script>
-    <script src="js/script.js"></script>
-
-</body>
-
+        <script src="js/data_structure.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
