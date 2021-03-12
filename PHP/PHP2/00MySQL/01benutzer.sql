@@ -43,6 +43,7 @@ ALTER TABLE benutzer ADD INDEX(email);
 
 -- inserts new data to benutzer with auto id
 INSERT INTO benutzer (benutzername, email, passwort) VALUES ('Lambda', 'lambda@lamb.da', 'lambda');
+INSERT INTO benutzer (id, benutzername, email, passwort) VALUES (NULL, 'Kappa', 'kappa@kap.pa', 'kappa');
 
 -- ##############################################
 -- ##############################################
