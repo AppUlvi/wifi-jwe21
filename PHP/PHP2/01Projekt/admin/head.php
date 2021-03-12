@@ -9,3 +9,13 @@
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Start</a></li>
+            <li><a href="zutaten_liste.php">Zutaten</a></li>
+            <li><a href="logout.php">Ausloggen</a>
+                (<?php echo $_SESSION["benutzername"] ?>)
+            </li>
+        </ul>
+    </nav>

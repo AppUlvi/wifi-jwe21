@@ -45,6 +45,17 @@ ALTER TABLE benutzer ADD INDEX(email);
 INSERT INTO benutzer (benutzername, email, passwort) VALUES ('Lambda', 'lambda@lamb.da', 'lambda');
 INSERT INTO benutzer (id, benutzername, email, passwort) VALUES (NULL, 'Kappa', 'kappa@kap.pa', 'kappa');
 
+-- selects with a condition
+SELECT * FROM benutzer WHERE benutzername = 'Lambda';
+
+-- update passwort from benutzer Alpha
+UPDATE benutzer SET passwort = '$2y$10$NEDwI7TRZdOXqUmpNULVOOQm4KkkIJODSU3V9cJ7hCQemLlMaPDyu' WHERE benutzer.id = 1; 
+
+-- add letztes_login and anzahl_logins to benutzer
+ALTER TABLE benutzer ADD letztes_login DATETIME NULL DEFAULT NULL AFTER passwort;
+
+ALTER TABLE benutzer ADD anzahl_logins INT UNSIGNED NOT NULL DEFAULT 0 AFTER letztes_login;
+
 -- ##############################################
 -- ##############################################
 
