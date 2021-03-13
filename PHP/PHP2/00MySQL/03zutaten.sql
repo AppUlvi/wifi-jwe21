@@ -18,6 +18,16 @@ INSERT INTO zutaten (titel) VALUES ('Eier');
 INSERT INTO zutaten (titel) VALUES ('Mehl');
 INSERT INTO zutaten (titel) VALUES ('Zucker');
 
+
+INSERT INTO zutaten (titel, kcal_pro_100) VALUES ('Tomaten', 19);
+
+UPDATE zutaten SET kcal_pro_100 = 387 WHERE zutaten.titel = 'Zucker';
+UPDATE zutaten SET kcal_pro_100 = 364 WHERE zutaten.titel = 'Mehl';
+UPDATE zutaten SET kcal_pro_100 = 42 WHERE zutaten.titel = 'Milch';
+UPDATE zutaten SET kcal_pro_100 = 155 WHERE zutaten.titel = 'Eier';
+
+
+
 -- ##############################################
 -- ##############################################
 

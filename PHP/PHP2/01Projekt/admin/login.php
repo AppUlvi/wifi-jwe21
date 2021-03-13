@@ -21,9 +21,9 @@ if (!empty($_POST)) {
         // Daten von Formular / Benutzer ($_GET und $_POST)
         // IMMER (!!!) mit mysqli_real_escape_string() behandeln,
         // bevor sie in Datenbank-Befehlen verwendet werden.
-        $sql_benutzername = mysqli_real_escape_string($db, $_POST["benutzername"]);
+        $sql_benutzername = escape("benutzername");
 
-        $result = mysqli_query($db, "SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'") or die(mysqli_error($db));
+        $result = query("SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'");
         // echo "<pre>"; print_r($result); echo "</pre>";
 
 
@@ -45,10 +45,7 @@ if (!empty($_POST)) {
                 $_SESSION["benutzername"] = $row["benutzername"];
 
                 // Letztes Login & Anzahl Logins in DB speichern
-                mysqli_query(
-                    $db,
-                    "UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'"
-                );
+                query("UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'");
 
                 // Umleitung ins Admin-System
                 header("Location: index.php");

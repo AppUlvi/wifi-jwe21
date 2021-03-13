@@ -22,6 +22,8 @@ ALTER TABLE rezepte ADD FOREIGN KEY (benutzer_id) REFERENCES benutzer(id) ON DEL
 -- add new data to rezepte
 INSERT INTO rezepte (id, benutzer_id, titel, beschreibung) VALUES (NULL, '2', 'Kaiserschmarrn', 'Testbeschreibung');
 
+INSERT INTO rezepte (id, benutzer_id, titel, beschreibung) VALUES (NULL, '2', 'Omelette', 'Testbeschreibung');
+
 -- ##############################################
 -- ##############################################
 

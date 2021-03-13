@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Montserrat', 'Georgia', sans-serif;
+    background-color: var(--b1);
+}
+
+/* WRAPPING */
+
+.innerWrapper {
+    max-width: 1024px;
+    /* desktop */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+form {
+    display: grid;
+    row-gap: 10px;
+}
+
+.norm-input {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+}
+
+.error {
+    color: red;
+}
+
+input {
+    border: 1px solid black;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
