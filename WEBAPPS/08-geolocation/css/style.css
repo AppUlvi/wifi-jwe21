@@ -1,0 +1,18 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        z-index: -1;
+    }
+
+    body {
+        font-family: 'Montserrat', 'Georgia', sans-serif;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 30px;
+        font-size: 12px;
+    }
+
+    #map{
+        height: 400px;
+        width: 100%;
+    }
