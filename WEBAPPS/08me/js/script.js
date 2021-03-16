@@ -11,7 +11,7 @@ function getMessages() {
             const ul = document.querySelector('#list-chat');
             ul.innerHTML = "";
 
-            for (const message of messages) {
+            for (const message of messages.reverse()) {
                 const li = document.createElement('li');
                 const timeAndName = document.createElement('div');
                 const text = document.createElement('p');
