@@ -1,0 +1,83 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        z-index: -1;
+    }
+
+    body {
+        font-family: 'Montserrat', 'Georgia', sans-serif;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 30px;
+        font-size: 12px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    div {
+        margin: 20px 0 20px;
+    }
+
+    input {
+        border: 1px solid black;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 5px;
+
+    }
+
+    textarea {
+        font-family: 'Montserrat', 'Georgia', sans-serif;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 5px;
+
+    }
+
+    .message-style{
+        display: inline-block;
+        font-size: 14px;
+        color: black;
+        border: 1px solid black; 
+        padding: 5px;
+        width: auto;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+    .name-style{
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    .date-style{
+        display: inline-block;
+    }
+
+    button {
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }

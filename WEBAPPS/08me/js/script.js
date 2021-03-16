@@ -39,9 +39,17 @@ function get() {
                 const li = document.createElement('li');
 
                 const timeAndName = document.createElement('p');
-                timeAndName.textContent = message.timestamp + ": " + message.name;;
                 const text = document.createElement('p');
-                text.textContent = message.text;
+
+                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+                const timestamp = Date.parse(message.timestamp);
+                const date = new Date(timestamp);
+                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
+                const dateFormat = new Intl.DateTimeFormat('de-AT', { dateStyle: 'long', timeStyle: 'medium' }).format(date);
+
+                timeAndName.innerHTML = "<p class='date-style'>" + dateFormat + ":</p> <p class='name-style'>" + message.name + "</p>";
+                text.innerHTML = message.text;
+                text.classList.add("message-style");
 
                 li.appendChild(timeAndName);
                 li.appendChild(text);
@@ -62,6 +70,7 @@ function postText() {
     const text = document.querySelector('#input-textarea-message').value;
 
     post(name, text);
+    showText();
 }
 
 function showText() {
@@ -69,5 +78,6 @@ function showText() {
     get();
 }
 
+get();
 document.querySelector('#btn-post').addEventListener('click', postText);
 document.querySelector('#btn-get').addEventListener('click', showText);
