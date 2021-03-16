@@ -43,11 +43,18 @@
         display: inline-block;
         font-size: 14px;
         color: black;
-        border: 1px solid black; 
+        /* border: 1px solid black;  */
+        background-color: lightgray;
         padding: 5px;
         width: auto;
         border-radius: 4px;
-        margin-top: 5px;
+        margin-top: 10px;
+    }
+
+
+
+    .message-header-style{
+        margin: 0;
     }
 
     .name-style{
@@ -62,9 +69,9 @@
     button {
         border: 1px solid black;
         border-radius: 4px;
-        width: 100px;
-        height: 40px;
-        font-size: 16px;
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
         margin-right: 20px;
     }
 

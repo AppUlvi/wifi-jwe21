@@ -38,7 +38,7 @@ function get() {
 
                 const li = document.createElement('li');
 
-                const timeAndName = document.createElement('p');
+                const timeAndName = document.createElement('div');
                 const text = document.createElement('p');
 
                 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -48,6 +48,7 @@ function get() {
                 const dateFormat = new Intl.DateTimeFormat('de-AT', { dateStyle: 'long', timeStyle: 'medium' }).format(date);
 
                 timeAndName.innerHTML = "<p class='date-style'>" + dateFormat + ":</p> <p class='name-style'>" + message.name + "</p>";
+                timeAndName.classList.add("message-header-style");
                 text.innerHTML = message.text;
                 text.classList.add("message-style");
 
