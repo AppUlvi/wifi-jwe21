@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <!-- removes favicon error -->
+
+    <title>Chat</title>
+</head>
+
+<body>
+    <header>
+        <h1>Chat</h1>
+    </header>
+
+    <main>
+        <div>
+            <label for="input-text-name">Name:</label>
+            <input type="text" name="input-text-name" id="input-text-name">
+        </div>
+        <div>
+            <label for="input-textarea-message">Message:</label>
+            <textarea name="input-textarea-message" id="input-textarea-message" cols="30" rows="10"></textarea>
+        </div>
+
+        <button id="btn-post">POST</button>
+        <button id="btn-get">SHOW</button>
+        <div>
+            <h2>Chat History:</h2>
+            <ul id="list-chat"></ul>
+        </div>
+
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

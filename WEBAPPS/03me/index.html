@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-        <!-- removes favicon error -->
 
-        <link rel="stylesheet" href="css/style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <!-- removes favicon error -->
 
-        <title>Array</title>
-    </head>
+    <link rel="stylesheet" href="css/style.css" />
 
-    <body>
-        <header>
-            <h1>Array erstellen</h1>
-        </header>
+    <title>Array</title>
+</head>
 
-        <main>
-            <div class="labels">
-                <label
-                    >Minimum
-                    <input class="input" type="number" id="start-value" />
-                </label>
-                <label
-                    >Maximum
-                    <input class="input" type="number" id="end-value" />
-                </label>
-                <label
-                    >Anzahl
-                    <input class="input" type="number" id="array-length" />
-                </label>
-            </div>
+<body>
+    <header>
+        <h1>Array erstellen</h1>
+    </header>
 
-            <div>
-                <button id="btn-generate">Erzeuge eine Liste</button>
-            </div>
+    <main>
+        <div class="labels">
+            <label>Minimum
+                <input class="input" type="number" id="start-value" />
+            </label>
+            <label>Maximum
+                <input class="input" type="number" id="end-value" />
+            </label>
+            <label>Anzahl
+                <input class="input" type="number" id="array-length" />
+            </label>
+        </div>
 
-            <div id="output"></div>
+        <div>
+            <button id="btn-generate">Erzeuge eine Liste</button>
+        </div>
 
-            <div class="labels">
-                <label
-                    >Nach Wert suchen
-                    <input class="input" type="text" id="search-value" />
-                </label>
-            </div>
+        <div id="output"></div>
 
-            <div>
-                <button id="btn-search">Suchen</button>
-            </div>
+        <div class="labels">
+            <label>Nach Wert suchen
+                <input class="input" type="text" id="search-value" />
+            </label>
+        </div>
 
-            <div class="labels">
-                <label
-                    >Gefunden
-                    <input
-                        class="input"
-                        readonly
-                        type="text"
-                        id="found-value"
-                    />
-                </label>
-            </div>
-        </main>
+        <div>
+            <button id="btn-search">Suchen</button>
+        </div>
 
-        <script src="js/script.js"></script>
-    </body>
+        <div class="labels">
+            <label>Gefunden
+                <input class="input" readonly type="text" id="found-value" />
+            </label>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>
