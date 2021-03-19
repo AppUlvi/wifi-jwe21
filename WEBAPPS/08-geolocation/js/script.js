@@ -29,7 +29,7 @@ function getPosition() {
     navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError, {
         enableHighAccuracy: true,
         timeout: 2000,
-        // MDN
+        // MDN für erweiterte Funktionalität
     });
 }
 
