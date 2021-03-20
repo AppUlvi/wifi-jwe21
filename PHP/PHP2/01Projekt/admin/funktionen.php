@@ -11,8 +11,7 @@ mysqli_set_charset($db, "utf8");
 
 // Diese Funktion überprüft, ob der Benutzer eingeloggt ist.
 // Falls nicht, wird er automatisch zum Login umgeleitet.
-function istEingeloggt()
-{
+function istEingeloggt() {
     if (empty($_SESSION["login"])) {
         header("Location: login.php");
         exit();
@@ -20,8 +19,7 @@ function istEingeloggt()
 }
 
 // Kurzform für mysqli_query die auch Fehler ausgibt, falls welche auftreten
-function query($str)
-{
+function query($str) {
     global $db;
     ($result = mysqli_query($db, $str)) or
         die(mysqli_error($db) . "<br>" . $str);
@@ -29,14 +27,15 @@ function query($str)
 }
 
 // Escape-Funktion um SQL-Injektion zu vermeiden
-function escape($globalVar, $var)
-{
+function escape($var, $globalVar = null) {
     global $db;
 
     if ($globalVar == "POST") {
         $result = mysqli_real_escape_string($db, $_POST[$var]);
     } elseif ($globalVar == "GET") {
         $result = mysqli_real_escape_string($db, $_GET[$var]);
+    } else if ($globalVar == null) {
+        $result = mysqli_real_escape_string($db, $var);
     } else {
         return null;
     }

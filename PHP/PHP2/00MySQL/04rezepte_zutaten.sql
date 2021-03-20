@@ -18,7 +18,7 @@ ALTER TABLE rezepte_zutaten ADD FOREIGN KEY (zutaten_id) REFERENCES zutaten(id) 
 
 -- add new columns to rezepte_zutaten
 ALTER TABLE rezepte_zutaten ADD menge DECIMAL(10, 2) NULL DEFAULT NULL AFTER zutaten_id; 
-ALTER TABLE rezepte_zutaten ADD einheit VARCHAR(190) NOT NULL AFTER zutaten_id; 
+ALTER TABLE rezepte_zutaten ADD einheit VARCHAR(190) NULL DEFAULT NULL zutaten_id; 
 
 -- insert new data to rezepte_zutaten
 INSERT INTO rezepte_zutaten (rezepte_id, zutaten_id) VALUES (1, 3);
@@ -29,6 +29,7 @@ UPDATE rezepte_zutaten SET menge = '500' WHERE rezepte_zutaten.id = 1;
 UPDATE rezepte_zutaten SET menge = '3' WHERE rezepte_zutaten.id = 2; 
 UPDATE rezepte_zutaten SET einheit = 'Gramm' WHERE rezepte_zutaten.id = 1; 
 UPDATE rezepte_zutaten SET einheit = 'Stück' WHERE rezepte_zutaten.id = 2; 
+
 
 -- ##############################################
 -- ##############################################

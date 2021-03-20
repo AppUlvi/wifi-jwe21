@@ -5,7 +5,7 @@ istEingeloggt();
 include "head.php";
 
 echo "<h1>Zutaten entfernen</h1>";
-$sql_id = escape("GET", "id");
+$sql_id = escape("id", 'GET');
 
 if (!empty($_GET["doit"])) {
     // Bestätigungs_Link wurde geklickt -> wirklich in DB löschen

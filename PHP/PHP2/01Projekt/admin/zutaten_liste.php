@@ -10,7 +10,7 @@ include "head.php";
 
 <?php
 
-$result = query("SELECT * FROM zutaten ORDER BY titel ASC");
+$result = query("SELECT * FROM zutaten ORDER BY kcal_pro_100 ASC");
 
 echo
 "<table>

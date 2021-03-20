@@ -21,7 +21,7 @@ if (!empty($_POST)) {
         // Daten von Formular / Benutzer ($_GET und $_POST)
         // IMMER (!!!) mit mysqli_real_escape_string() behandeln,
         // bevor sie in Datenbank-Befehlen verwendet werden.
-        $sql_benutzername = escape("benutzername");
+        $sql_benutzername = escape("benutzername", 'POST');
 
         $result = query("SELECT * FROM benutzer WHERE benutzername = '{$sql_benutzername}'");
         // echo "<pre>"; print_r($result); echo "</pre>";
@@ -43,6 +43,7 @@ if (!empty($_POST)) {
 
                 $_SESSION["login"] = true;
                 $_SESSION["benutzername"] = $row["benutzername"];
+                $_SESSION["benutzer_id"] = $row["id"];
 
                 // Letztes Login & Anzahl Logins in DB speichern
                 query("UPDATE benutzer SET letztes_login = NOW(), anzahl_logins = anzahl_logins + 1 WHERE id = '{$row["id"]}'");

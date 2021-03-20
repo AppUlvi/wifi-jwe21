@@ -13,9 +13,9 @@ echo '</pre>';
 
 // Prüfen ob das Formular abgeschickt wurde
 if (!empty($_POST)) {
-    $sql_titel = escape('POST', 'titel');
+    $sql_titel = escape('titel', 'POST');
     $sql_kcal =
-        $_POST['kcal_pro_100'] != '' ? escape('POST', 'kcal_pro_100') : 'NULL';
+        $_POST['kcal_pro_100'] != '' ? escape('kcal_pro_100', 'POST') : 'NULL';
 
     // Validierung
     if (empty($_POST['titel'])) {
@@ -45,28 +45,21 @@ if (!empty($_POST)) {
 <form action="zutaten_add.php" method="POST">
     <div class="norm-input">
         <label for="titel">Zutat:</label>
-        <input type="text" 
-        name="titel" 
-        id="titel" 
-        value="<?php if (!empty($_POST['titel']) && !$erfolg) {
-            echo htmlspecialchars($_POST['titel']);
-        } else {
-            echo htmlspecialchars($row['titel']);
-        } ?>">
+        <input type="text" name="titel" id="titel" value="<?php if (!empty($_POST['titel']) && !$erfolg) {
+                                                                echo htmlspecialchars($_POST['titel']);
+                                                            } else {
+                                                                echo htmlspecialchars($row['titel']);
+                                                            } ?>">
     </div>
     <div class="norm-input">
         <label for="kcal_pro_100">kcal pro 100g:</label>
-        <input type="number" 
-        step="0.01" 
-        min="0.00" 
-        name="kcal_pro_100" 
-        id="kcal_pro_100" 
-        value="<?php if (!empty($_POST['kcal_pro_100']) && !$erfolg) {
-            echo htmlspecialchars($_POST['kcal_pro_100']);
-        } else {
-            echo htmlspecialchars($row['kcal_pro_100']);
-        } ?>">
+        <input type="number" step="0.01" min="0.00" name="kcal_pro_100" id="kcal_pro_100" value="<?php if (!empty($_POST['kcal_pro_100']) && !$erfolg) {
+                                                                                                        echo htmlspecialchars($_POST['kcal_pro_100']);
+                                                                                                    } else {
+                                                                                                        echo htmlspecialchars($row['kcal_pro_100']);
+                                                                                                    } ?>">
     </div>
+
     <div>
         <button type="submit">Zutat anlegen</button>
     </div>

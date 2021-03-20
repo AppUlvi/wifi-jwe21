@@ -24,6 +24,7 @@ INSERT INTO rezepte (id, benutzer_id, titel, beschreibung) VALUES (NULL, '2', 'K
 
 INSERT INTO rezepte (id, benutzer_id, titel, beschreibung) VALUES (NULL, '2', 'Omelette', 'Testbeschreibung');
 
+
 -- ##############################################
 -- ##############################################
 
