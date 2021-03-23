@@ -18,9 +18,9 @@ function getMessages() {
 
                 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
                 const timestamp = Date.parse(message.timestamp);
-                const date = new Date(timestamp);
+                // const date = new Date(timestamp);
                 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options
-                const dateFormat = new Intl.DateTimeFormat('de-AT', { dateStyle: 'long', timeStyle: 'medium' }).format(date);
+                const dateFormat = new Intl.DateTimeFormat('de-AT', { dateStyle: 'long', timeStyle: 'medium' }).format(timestamp);
 
                 timeAndName.innerHTML = "<p class='date-style'>" + dateFormat + ":</p> <p class='name-style'>" + message.name + "</p>";
                 timeAndName.classList.add("message-header-style");
