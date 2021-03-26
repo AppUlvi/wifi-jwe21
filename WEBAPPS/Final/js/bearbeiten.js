@@ -26,26 +26,6 @@ function getParamFromURL(param) {
     return urlParams.get(param);
 }
 
-// fills notification div with a message and a link to go back to index
-// sets a warning class to the p tag if wanted
-function onNotification(message, warn = false) {
-    const div = document.querySelector('#notification');
-    div.innerHTML = "";
-
-    const p = document.createElement('p');
-    p.textContent = message;
-    if (warn) {
-        p.classList.add('warning');
-    }
-
-    const link = document.createElement('a');
-    link.textContent = 'Zurueck zur Uebersicht';
-    link.href = 'index.html';
-
-    div.appendChild(p);
-    div.appendChild(link);
-}
-
 // =============================================================================
 
 function getTower() {
@@ -139,7 +119,7 @@ function getTower() {
 async function getTowerDetails() {
     const id = getParamFromURL('id');
     let towerDetails = {};
-    // await causes to pause your code until the async function returns the result
+    // await causes to pause your code until the fetch is complete
     await fetch(`https://test.sunbeng.eu/api/towers/${id}`)
         .then(function (response) {
             if (response.ok) {
@@ -230,7 +210,6 @@ async function postTower() {
 
 // =============================================================================
 
-// main
 getTower();
 document.querySelector('#btn-save').addEventListener('click', postTower);
 

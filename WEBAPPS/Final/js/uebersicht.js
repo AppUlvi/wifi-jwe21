@@ -38,7 +38,7 @@ if (navigator.geolocation) {
             if (result.state !== 'denied') {
                 getPosition();
             } else {
-                throw new Error('Geolocation abgelehnt');
+                throw new Error('Geolocation wurde abgelehnt');
             }
         }).catch((error) => {
             onError(error);
@@ -187,7 +187,6 @@ function getTowers() {
 
 // =============================================================================
 
-// main
 getTowers();
 
 
