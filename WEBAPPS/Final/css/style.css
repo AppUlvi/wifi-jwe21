@@ -40,6 +40,10 @@
         font-weight: bold;
     }
 
+    button:active {
+        font-size: 105%;
+    }
+
     #ul-tower-list {
         padding: 0;
     }
