@@ -173,7 +173,7 @@ async function postTower() {
     // if the current details are the same as the previous GET details warn user 
     // else use fetch POST to change the values
     if (tower.name === towerDetails.name && tower.range === towerDetails.range && tower.is5GEnabled === towerDetails.is5GEnabled) {
-        onNotification("Es wurde nichts verändert", true);
+        onNotification("Es wurde nichts veraendert", true);
     } else if (isNaN(towerDetails.range)) {
         onNotification("Bitte eine gueltige Zahl bei der Reichweite eingegeben", true);
     } else {
