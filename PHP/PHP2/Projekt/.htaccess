@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteBase /PHP2/Projekt/
+
+RewriteRule ^\/?api\/? api.php
