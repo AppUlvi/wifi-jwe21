@@ -15,8 +15,6 @@ $result = query("SELECT * FROM passagiere LEFT JOIN fluege ON passagiere.fluege_
 // var_dump($_POST);
 // echo '</pre>';
 
-$flugangst = $row['flugangst'] == '1' ? "Ja" : "Nein";
-
 echo "<div class='row font-weight-bold border-bottom text-center'>";
 echo "<div class='col-1'>Vorname</div>";
 echo "<div class='col-1'>Nachname</div>";
