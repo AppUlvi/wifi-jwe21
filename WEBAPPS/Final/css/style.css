@@ -1,0 +1,95 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        z-index: -1;
+    }
+
+    body {
+        font-family: 'Montserrat', 'Georgia', sans-serif;
+        max-width: 1024px;
+        margin: 0 auto 200px;
+        padding: 0 30px;
+        font-size: 12px;
+    }
+
+    input {
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    button {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px 0 10px;
+        padding: 5px;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: darkgrey;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px 0 10px;
+        padding: 5px;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    #ul-tower-list {
+        padding: 0;
+    }
+
+    #ul-tower-list>li {
+        list-style-type: none;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        max-width: 300px;
+    }
+
+    strong {
+        margin-right: 5px;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+
+    #tower-details {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        max-width: 450px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #notification {
+        color: green;
+        font-weight: bold;
+    }
+
+    .warning {
+        color: red;
+        font-weight: bold;
+    }
+
+    .label-input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 400px) {
+        .label-input {
+            flex-direction: column;
+        }
+    }

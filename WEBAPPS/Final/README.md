@@ -45,17 +45,17 @@ Ein Sendemasten wird in der API als Object mit Properties für Identifikation, N
     "id": "styria1",
     "lat": 47.394167,
     "lon ": 13.689167,
-    "cost ": 18378.32
+    "cost ": 18378.32,
     "name": "Schladming",
     "range": 50,
-    "is5GEnabled ": false,
+    "is5GEnabled": false,
 }
 ```
 
-**id** Ein String, der den Sendemasten eindeutig identifizert.  Er kann aus Buchstaben und Zahlen bestehen. Diese Property kann von den Anwendern nicht bearbeitet werden.
-**lat** Der Breitengrad der Position des Sendemasten als Dezimalzahl. Diese Property kann von den Anwendern nicht bearbeitet werden.
-**lon** Der Längengrad der Position des Sendemasten als Dezimalzahl. Diese Property kann von den Anwendern nicht bearbeitet werden.
-**cost** Die jährlichen Kosten für den Betrieb des Sendemasten in Euro als eine Dezimalzahl mit maximal zwei Nachkommastellen. Diese Property kann von den Anwendern nicht bearbeitet werden.
+**id** Ein String, der den Sendemasten eindeutig identifizert.  Er kann aus Buchstaben und Zahlen bestehen. Diese Property kann von den Anwendern **nicht** bearbeitet werden.
+**lat** Der Breitengrad der Position des Sendemasten als Dezimalzahl. Diese Property kann von den Anwendern **nicht** bearbeitet werden.
+**lon** Der Längengrad der Position des Sendemasten als Dezimalzahl. Diese Property kann von den Anwendern **nicht** bearbeitet werden.
+**cost** Die jährlichen Kosten für den Betrieb des Sendemasten in Euro als eine Dezimalzahl mit maximal zwei Nachkommastellen. Diese Property kann von den Anwendern **nicht** bearbeitet werden.
 **name** Der Name des Sendemasten als String. Diese Property kann von den Anwendern bearbeiten werden.
 **range** Eine positive Zahl die die Reichweite des Sendemasten in Metern angibt. Diese Property kann von den Anwendern bearbeiten werden.
 **is5GEnabled** Eine boolesche Property die angibt, ob ein Sendemasten 5G unterstützt (true) oder nicht (false). Diese Property kann von den Anwendern bearbeiten werden.
