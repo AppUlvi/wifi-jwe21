@@ -15,6 +15,7 @@
     <nav>
         <ul>
             <li><a href="index.php">Start</a></li>
+            <li><a href="fahrzeuge_liste.php">Fahrzeuge</a></li>
             <li><a href="logout.php">Ausloggen</a>
                 (Eingeloggt als: <?php echo $_SESSION["benutzername"] ?>)
             </li>
